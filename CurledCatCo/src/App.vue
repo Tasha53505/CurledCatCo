@@ -1,11 +1,27 @@
-<script setup></script>
+<script setup>
+import { RouterView } from 'vue-router'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div id="app">
+    <Header />
+    <main>
+      <RouterView />
+    </main>
+    <Footer />
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+</style>
