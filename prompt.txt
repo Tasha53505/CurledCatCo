@@ -1,0 +1,6 @@
+I have a vue website. My candle brand is Curled Cat Co. All of my jars are either Black, white or clear with inverted
+label colours i.e black jar = white label. All of the candle names feature cat related names i.e "Idle Hours" is just 
+about cats doing nothing all day. the unique thing about my candle brand is that although the branding / jars is basic
+Each wax is coloured different, and I also handpaint a wax pawprint onto the top. Now, I already have the vue startup 
+created in the workspace. I want to create a modern black and white e-commerce website with Vue. I will buy a domain 
+later. I was to use Nexify or vercel to host as it's free, but again that can come later. Can you edit the exisiting  
