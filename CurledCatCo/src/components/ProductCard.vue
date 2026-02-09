@@ -54,7 +54,7 @@ const handleAddToCart = () => {
 
 .product-image-container {
   position: relative;
-  height: 250px;
+  height: 420px;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -71,8 +71,8 @@ const handleAddToCart = () => {
 
 .jar-mockup {
   position: absolute;
-  width: 120px;
-  height: 160px;
+  width: 160px;
+  height: 220px;
   border: 2px solid #000000;
   display: flex;
   flex-direction: column;
@@ -166,12 +166,12 @@ const handleAddToCart = () => {
 
 @media (max-width: 768px) {
   .product-image-container {
-    height: 200px;
+    height: 320px;
   }
 
   .jar-mockup {
-    width: 100px;
-    height: 140px;
+    width: 140px;
+    height: 200px;
   }
 
   .product-info h3 {
