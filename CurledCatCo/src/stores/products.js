@@ -10,6 +10,8 @@ export const products = [
     size: '9 oz',
     price: 12,
     image: '/placeholder-candle.svg',
+    // optional video preview to play on hover
+    video: '/placeholder-video.mp4',
   },
   {
     id: 2,
@@ -21,6 +23,7 @@ export const products = [
     size: '9 oz',
     price: 12,
     image: '/placeholder-candle.svg',
+    // no video available for this product (will just show static image)
   },
   {
     id: 3,
@@ -32,6 +35,7 @@ export const products = [
     size: '9 oz',
     price: 12,
     image: '/placeholder-candle.svg',
+    // also no video for now
   },
 ]
 

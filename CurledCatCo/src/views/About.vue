@@ -42,7 +42,7 @@ import { RouterLink } from 'vue-router'
           <div class="feature-card">
             <div class="feature-number">3</div>
             <h3>Hand-Painted Pawprints</h3>
-            <p>Every single candle is finished with a hand-painted pawprint on top. No two are exactly alike.</p>
+            <p>Every single candle is finished with our signature hand-painted pawprint on top—no two are exactly alike.</p>
           </div>
           <div class="feature-card">
             <div class="feature-number">4</div>
@@ -56,8 +56,9 @@ import { RouterLink } from 'vue-router'
         <h2>Jar & Label Design</h2>
         <p>
           We believe in simplicity and elegance. Our candles come in three jar colors: black, white, and clear. To make
-          them pop, we use inverted label colors—so a black jar has a white label, and vice versa. This creates a
-          striking, modern look that's perfect for any home.
+          them pop, we use inverted label colors—so a black jar has a white label, and vice versa. Because the jars and
+          labels are so clean and minimal, the vibrant wax color becomes a fun burst of personality, giving each
+          candle a sleek, modern look with a playful pop of color.
         </p>
       </section>
 
