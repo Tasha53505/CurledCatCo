@@ -125,7 +125,7 @@ const handleSubmit = () => {
 
         <div class="info-card">
           <h3>📍 Shipping</h3>
-          <p>We currently ship within the UK. International shipping coming soon!</p>
+          <p>We currently ship within New Zealand.</p>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import { useCart } from '@/composables/useCart'
 
 defineProps({
@@ -8,17 +9,46 @@ defineProps({
   },
 })
 
+const videoRef = ref(null)
+
 const { addToCart } = useCart()
 
 const handleAddToCart = () => {
   addToCart(product)
 }
+
+function handleMouseOver() {
+  if (videoRef.value) {
+    videoRef.value.play().catch(() => {})
+  }
+}
+
+function handleMouseLeave() {
+  if (videoRef.value) {
+    videoRef.value.pause()
+    videoRef.value.currentTime = 0
+  }
+}
 </script>
 
 <template>
   <div class="product-card">
-    <div class="product-image-container">
+    <div class="product-image-container" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
       <img :src="product.image" :alt="product.name" class="product-image" />
+      <!-- show video element if a preview URL is provided -->
+      <video
+        v-if="product.video"
+        ref="videoRef"
+        class="product-video"
+        muted
+        loop
+        preload="metadata"
+        playsinline
+      >
+        <source :src="product.video" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <div class="jar-mockup" :class="`jar-${product.jarColor}`">
         <div class="wax" :style="{ backgroundColor: product.waxColor }"></div>
         <div class="pawprint">🐾</div>
@@ -67,6 +97,25 @@ const handleAddToCart = () => {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.product-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.product-image-container:hover .product-video {
+  display: block;
+}
+
+.product-image-container:hover .product-image {
+  opacity: 0;
 }
 
 .jar-mockup {
