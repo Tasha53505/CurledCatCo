@@ -2,10 +2,12 @@
 import { RouterView } from 'vue-router'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Curtain from '@/components/Curtain.vue'
 </script>
 
 <template>
   <div id="app">
+    <Curtain />
     <Header />
     <main>
       <RouterView />
