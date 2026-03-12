@@ -10,8 +10,8 @@ import { RouterLink } from 'vue-router'
         <h1>Curled Cat Co</h1>
         <p class="hero-tagline">Handcrafted Candles for Cat Lovers</p>
         <p class="hero-description">
-          Each candle is lovingly made with quality wax, hand-painted with a pawprint, and named after our feline
-          friends. Experience the art of slow living.
+          Each candle is lovingly made with quality wax, hand-painted with a pawprint, and named
+          after our feline friends. Experience the art of slow living.
         </p>
         <RouterLink to="/shop" class="cta-button">Shop Now</RouterLink>
       </div>
@@ -22,14 +22,17 @@ import { RouterLink } from 'vue-router'
       <div class="container">
         <h2 class="text-center">Our Story</h2>
         <p class="preview-text">
-          I fell in love with candles when I visited my fiancé in the USA. I became obsessed with Bath and Body Works
-          candles, but found the costs were adding up and they didn't have all the scents I wanted. I thought, why not
-          make my own and share them with fellow cat lovers like me?
+          I fell in love with candles when I visited my fiancé in the USA. I became obsessed with
+          Bath and Body Works candles / candles in general, but found the costs were adding up and
+          they didn't have all the scents I wanted. As a girl who loves art, works in Tech and is a
+          cat lover, I wanted to make my own and share them with fellow cat lovers like me?
+          Expressing my creativity through candle making has been a wonderful journey, and I'm
+          excited to share it with you all.
         </p>
         <p class="preview-text">
-          Every Curled Cat Co candle is a labor of love. Our logo was drawn based on my cat, Norman. I'm constantly
-          thinking of new scent ideas, designs, and cat-inspired names. Each candle is hand-poured and finished with a
-          unique pawprint on top.
+          Every Curled Cat Co candle is a labor of love. Our logo was drawn based on my cat, Norman.
+          I'm constantly thinking of new scent ideas, designs, and cat-inspired names. Each candle
+          is hand-poured and finished with a unique handcrafted pawprint on top.
         </p>
         <RouterLink to="/about" class="read-more-link">Read Full Story →</RouterLink>
       </div>
@@ -74,7 +77,7 @@ import { RouterLink } from 'vue-router'
         <h2 class="text-center mb-3">Why Curled Cat Co</h2>
         <div class="features">
           <div class="feature">
-            <div class="feature-icon">✋</div>
+            <div class="feature-icon">🖐️</div>
             <h3>Hand-Poured</h3>
             <p>Each candle is poured with care and attention to detail.</p>
           </div>
@@ -89,9 +92,9 @@ import { RouterLink } from 'vue-router'
             <p>Our signature colorful wax makes each candle a beautiful piece of art.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon">🐱</div>
+            <div class="feature-icon">🐈‍⬛</div>
             <h3>Cat-Inspired</h3>
-            <p>All our candles are named after our feline friends and their quirky personalities.</p>
+            <p>All our candles are named after our kitty friends and their quirky personalities.</p>
           </div>
         </div>
       </div>

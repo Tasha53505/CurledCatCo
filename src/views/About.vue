@@ -12,17 +12,33 @@ import { RouterLink } from 'vue-router'
 
     <div class="container about-content">
       <section class="story-section">
-        <h2>Our Story</h2>
+        <h2>My Story</h2>
         <p>
-          I fell in love with candles when I went to visit my fiancé in the USA. I became obsessed with Bath and Body
-          Works candles, but found that the costs were adding up and they didn't have all the scents I wanted. I thought
-          to myself: why not make my own candles and sell them to people? This way, I could share unique scents with
-          fellow cat lovers like me.
+          Hello ! My name is Tasha and I love candles and cats. I started Curled Cat Co as a way to
+          combine my passions and share them with fellow cat lovers. <br /><br />I fell in love with
+          candles when I visited my fiancé in the USA. I became obsessed with Bath and Body Works
+          candles / candles in general, but found the costs were adding up and they didn't have all
+          the scents I wanted. As a girl who loves art, works in tech and is loves cats, I wanted to
+          make my own and share them with fellow cat lovers like me. Expressing my creativity
+          through candle making has been and is a wonderful journey, and I'm excited to share it
+          with you all.
         </p>
         <p>
-          The idea of Curled Cat Co was born from my passion for candles and my love for cats. I wanted to create
-          something special that celebrated both. Our logo was hand-drawn based on my own cat, Norman, who inspired the
-          whole journey.
+          The idea of Curled Cat Co was born from my passion for candles and my love for cats. I
+          wanted to create something special that celebrated both. Our logo was hand-drawn based on
+          my own cat, Norman, who inspired the whole journey.
+        </p>
+
+        <p>
+          I didn't dive head first into making candles. I did 5 months of intense research before I
+          even MADE my first candle. I wanted to understand everything I could before I started. I
+          studied the different waxes, jars, and wick types (LX, CDN, etc.), hot and cold throw
+          performance (How strong the scent is when a candle is lit and how strong a scent is from
+          an unlit candle), How wax pools work and what is the ideal melting poolp per hour,
+          fragrance quality and load percentages, vessel diameters, environmental factors (like
+          airflow or room size affecting hot throw), as well as many common issues I've seen in the
+          community: i.e sinkholes, mushrooming, tunneling, airbubbles,and frosting and how to avoid
+          / fix them.
         </p>
       </section>
 
@@ -32,22 +48,34 @@ import { RouterLink } from 'vue-router'
           <div class="feature-card">
             <div class="feature-number">1</div>
             <h3>Hand-Poured Wax</h3>
-            <p>Each candle is carefully poured by hand, ensuring quality and consistency in every batch.</p>
+            <p>
+              Each candle is carefully poured by hand, ensuring quality and consistency in every
+              batch.
+            </p>
           </div>
           <div class="feature-card">
             <div class="feature-number">2</div>
-            <h3>Unique Wax Colors</h3>
-            <p>Our signature colored wax is what sets us apart. Each candle features a different, vibrant wax color.</p>
+            <h3>Unique Wax Colours</h3>
+            <p>
+              Our signature colored wax is what sets us apart. Each candle features a different,
+              vibrant wax color.
+            </p>
           </div>
           <div class="feature-card">
             <div class="feature-number">3</div>
             <h3>Hand-Painted Pawprints</h3>
-            <p>Every single candle is finished with our signature hand-painted pawprint on top—no two are exactly alike.</p>
+            <p>
+              Every single candle is finished with our signature hand-painted pawprint on top: no
+              two are exactly alike.
+            </p>
           </div>
           <div class="feature-card">
             <div class="feature-number">4</div>
             <h3>Cat-Inspired Names</h3>
-            <p>All our candles have cat-inspired names that reflect their personality and scent profile.</p>
+            <p>
+              All our candles have cat-inspired names that reflect their personality or cat related
+              ideas, making them fun and unique gifts for cat lovers.
+            </p>
           </div>
         </div>
       </section>
@@ -55,23 +83,25 @@ import { RouterLink } from 'vue-router'
       <section class="jar-design">
         <h2>Jar & Label Design</h2>
         <p>
-          We believe in simplicity and elegance. Our candles come in three jar colors: black, white, and clear. To make
-          them pop, we use inverted label colors—so a black jar has a white label, and vice versa. Because the jars and
-          labels are so clean and minimal, the vibrant wax color becomes a fun burst of personality, giving each
-          candle a sleek, modern look with a playful pop of color.
+          We believe in simplicity and elegance. Our candles come in three jar Colours: black,
+          white, and clear. To make them pop, we use inverted label Colours: so a black jar has a
+          white label, and vice versa. Because the jars and labels are so clean and minimal, the wax
+          colours becomes a fun burst of personality, giving each candle a sleek, modern look with a
+          playful pop of color.
         </p>
       </section>
 
       <section class="philosophy">
         <h2>Our Philosophy</h2>
         <p>
-          At Curled Cat Co, we're obsessed with the details. From thinking of new scent ideas and unique cat names to
-          designing labels and hand-painting each pawprint, every aspect of our candles is a labor of love.
+          At Curled Cat Co, we're obsessed with the details. From thinking of new scent ideas and
+          unique cat names to designing labels and hand-painting each pawprint, every aspect of our
+          candles is a labour of love.
         </p>
         <p>
-          We want our customers to feel the care and passion that goes into each candle. Whether you're a cat lover,
-          candle enthusiast, or someone looking for a meaningful gift, we believe there's a Curled Cat Co candle for
-          you.
+          We want our customers to feel the care and passion that goes into each candle. Whether
+          you're a cat lover, candle enthusiast, or someone looking for a meaningful gift, we
+          believe there's a Curled Cat Co candle for you.
         </p>
       </section>
 
