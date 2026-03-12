@@ -33,7 +33,11 @@ function handleMouseLeave() {
 
 <template>
   <div class="product-card">
-    <div class="product-image-container" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
+    <div
+      class="product-image-container"
+      @mouseover="handleMouseOver"
+      @mouseleave="handleMouseLeave"
+    >
       <img :src="product.image" :alt="product.name" class="product-image" />
       <!-- show video element if a preview URL is provided -->
       <video
@@ -59,11 +63,13 @@ function handleMouseLeave() {
       <p class="product-description">{{ product.description }}</p>
       <div class="product-details">
         <span class="size">{{ product.size }}</span>
-        <span class="jar-type">{{ product.jarColor.charAt(0).toUpperCase() + product.jarColor.slice(1) }} jar</span>
+        <span class="jar-type"
+          >{{ product.jarColor.charAt(0).toUpperCase() + product.jarColor.slice(1) }} jar</span
+        >
       </div>
       <div class="product-footer">
         <span class="price">${{ product.price }}</span>
-        <button class="add-to-cart-btn" @click="handleAddToCart">Add to Cart</button>
+        <button class="add-to-cart-btn" @click.stop="handleAddToCart">Add to Cart</button>
       </div>
     </div>
   </div>

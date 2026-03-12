@@ -50,7 +50,14 @@ import { products } from '@/stores/products'
       <div class="products-section">
         <h2>All Products</h2>
         <div class="products-grid">
-          <ProductCard v-for="product in products" :key="product.id" :product="product" />
+          <router-link
+            v-for="product in products"
+            :key="product.id"
+            :to="{ name: 'Product', params: { id: product.id } }"
+            class="product-link"
+          >
+            <ProductCard :product="product" />
+          </router-link>
         </div>
       </div>
     </div>
@@ -123,6 +130,11 @@ import { products } from '@/stores/products'
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 1024px) {
