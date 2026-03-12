@@ -10,26 +10,50 @@ const formData = ref({
 
 const submitted = ref(false)
 
-const handleSubmit = () => {
+const error = ref('')
+
+const handleSubmit = async () => {
+  error.value = ''
+
   // Basic validation
   if (
-    formData.value.name &&
-    formData.value.email &&
-    formData.value.subject &&
-    formData.value.message
+    !formData.value.name ||
+    !formData.value.email ||
+    !formData.value.subject ||
+    !formData.value.message
   ) {
+    error.value = 'Please fill out all fields.'
+    return
+  }
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData.value),
+    })
+
+    if (!res.ok) {
+      const payload = await res.json().catch(() => ({}))
+      error.value = payload?.error || 'Failed to send message.'
+      return
+    }
+
     submitted.value = true
-    // Reset form
     formData.value = {
       name: '',
       email: '',
       subject: '',
       message: '',
     }
+
     // Hide message after 5 seconds
     setTimeout(() => {
       submitted.value = false
     }, 5000)
+  } catch (err) {
+    error.value = 'Failed to send message.'
+    console.error(err)
   }
 }
 </script>
@@ -51,16 +75,14 @@ const handleSubmit = () => {
           <p>✓ Thank you for your message! We'll get back to you soon.</p>
         </div>
 
+        <div v-if="error" class="error-message">
+          <p>⚠️ {{ error }}</p>
+        </div>
+
         <form @submit.prevent="handleSubmit" class="contact-form">
           <div class="form-group">
             <label for="name">Name *</label>
-            <input
-              id="name"
-              v-model="formData.name"
-              type="text"
-              placeholder="Your name"
-              required
-            />
+            <input id="name" v-model="formData.name" type="text" placeholder="Your name" required />
           </div>
 
           <div class="form-group">
@@ -69,7 +91,7 @@ const handleSubmit = () => {
               id="email"
               v-model="formData.email"
               type="email"
-              placeholder="your.email@example.com"
+              placeholder="example@gmail.com"
               required
             />
           </div>
@@ -105,7 +127,7 @@ const handleSubmit = () => {
 
         <div class="info-card">
           <h3>📧 Email</h3>
-          <p><a href="mailto:hello@curledcatco.com">hello@curledcatco.com</a></p>
+          <p><a href="mailto:curledcatco@gmail.com">curledcatco@gmail.com</a></p>
         </div>
 
         <div class="info-card">
@@ -120,7 +142,9 @@ const handleSubmit = () => {
 
         <div class="info-card">
           <h3>💌 Newsletter</h3>
-          <p>Sign up for our newsletter to be the first to hear about new scents and special offers!</p>
+          <p>
+            Sign up for our newsletter to be the first to hear about new scents and special offers!
+          </p>
         </div>
 
         <div class="info-card">

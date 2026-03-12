@@ -8,7 +8,10 @@ import { RouterLink } from 'vue-router'
       <div class="footer-content">
         <div class="footer-section">
           <h4>Curled Cat Co</h4>
-          <p>Handcrafted candles inspired by our feline friends. Each candle is lovingly made with quality wax and brushed with a hand-painted pawprint.</p>
+          <p>
+            Handcrafted candles inspired by our feline friends. Each candle is lovingly made with
+            quality wax and brushed with a hand-painted pawprint.
+          </p>
         </div>
         <div class="footer-section">
           <h4>Quick Links</h4>
@@ -21,7 +24,7 @@ import { RouterLink } from 'vue-router'
         </div>
         <div class="footer-section">
           <h4>Contact</h4>
-          <p>Email: hello@curledcatco.com</p>
+          <p>Email: curledcatco@gmail.com</p>
           <p>Follow us on social media for new scent releases and cat content!</p>
         </div>
       </div>

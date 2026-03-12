@@ -1,6 +1,29 @@
 <script setup>
 import ProductCard from '@/components/ProductCard.vue'
+import { ref } from 'vue'
 import { products } from '@/stores/products'
+
+const currentIndex = ref(0)
+const modalOpen = ref(false)
+const modalProduct = ref(null)
+
+const prev = () => {
+  currentIndex.value = (currentIndex.value - 1 + products.length) % products.length
+}
+
+const next = () => {
+  currentIndex.value = (currentIndex.value + 1) % products.length
+}
+
+const openModal = (product) => {
+  modalProduct.value = product
+  modalOpen.value = true
+}
+
+const closeModal = () => {
+  modalOpen.value = false
+  modalProduct.value = null
+}
 </script>
 
 <template>
@@ -13,7 +36,31 @@ import { products } from '@/stores/products'
     </div>
 
     <div class="container shop-content">
-      <div class="filters">
+      <div class="coming-soon">
+        <h2>Shop Not Available Yet 🐈‍⬛</h2>
+        <p>
+          As my business has not launched yet and this site serves purely as a showcase of my work,
+          buying candles is not available yet. My work may not be copied, stolen, or referenced.
+        </p>
+      </div>
+
+      <div class="carousel">
+        <button class="carousel-nav prev" type="button" @click="prev">‹</button>
+        <div class="carousel-track">
+          <div
+            v-for="(product, index) in products"
+            :key="product.id"
+            class="carousel-item"
+            :class="{ active: index === currentIndex }"
+          >
+            <img :src="product.image" :alt="product.name" @click="openModal(product)" />
+            <div class="carousel-caption">{{ product.name }}</div>
+          </div>
+        </div>
+        <button class="carousel-nav next" type="button" @click="next">›</button>
+      </div>
+
+      <!-- <div class="filters">
         <div class="filter-section">
           <h3>Jar Color</h3>
           <label>
@@ -58,6 +105,19 @@ import { products } from '@/stores/products'
           >
             <ProductCard :product="product" />
           </router-link>
+        </div>
+      </div> -->
+
+      <div
+        v-if="modalOpen"
+        class="modal"
+        @click.self="closeModal"
+        @keydown.escape.window="closeModal"
+      >
+        <div class="modal-content">
+          <button class="modal-close" type="button" @click="closeModal">×</button>
+          <img :src="modalProduct?.image" :alt="modalProduct?.name" />
+          <div class="modal-caption">{{ modalProduct?.name }}</div>
         </div>
       </div>
     </div>
@@ -163,5 +223,162 @@ import { products } from '@/stores/products'
   .shop-content {
     padding: 1.5rem 0;
   }
+}
+
+.coming-soon {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.coming-soon h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.coming-soon p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.carousel {
+  position: relative;
+  margin: 2rem 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  width: 100%;
+  max-width: 960px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-item {
+  flex: 0 0 260px;
+  opacity: 0.3;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 0 0.75rem;
+  pointer-events: none;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  padding: 1rem;
+}
+
+.carousel-caption {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.carousel-nav {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.carousel-nav.prev {
+  left: -20px;
+}
+
+.carousel-nav.next {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    padding: 0 1rem;
+  }
+
+  .carousel-item {
+    flex: 0 0 220px;
+  }
+
+  .carousel-nav {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.carousel-item img {
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 100;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 720px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.modal-caption {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #333;
 }
 </style>
