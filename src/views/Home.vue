@@ -10,10 +10,14 @@ import { RouterLink } from 'vue-router'
         <h1>Curled Cat Co</h1>
         <p class="hero-tagline">Handcrafted Candles for Cat Lovers</p>
         <p class="hero-description">
-          Each candle is lovingly made with quality wax, hand-painted with a pawprint, and named
-          after our feline friends. Experience the art of slow living.
+          <!-- Each candle is lovingly made with quality wax, hand-painted with a pawprint, and named
+          after our kitty friends unique personalities. Experience the art of slow living. -->
+
+          Every candle is poured with care, finished with a hand-painted pawprint, and inspired by
+          the unique charm of our kitty friends. Bring a touch of calm and cozy luxury to your space
+          and Each candle invites you to slow down, unwind, and enjoy the little moments in life.
         </p>
-        <RouterLink to="/shop" class="cta-button">Shop Now</RouterLink>
+        <RouterLink to="/shop" class="cta-button">View Curled Cat Co. Candle Collection</RouterLink>
       </div>
     </section>
 
