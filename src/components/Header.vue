@@ -14,7 +14,7 @@ const { cartItemCount } = useCart()
         </RouterLink>
         <ul class="nav-links">
           <li><RouterLink to="/">Home</RouterLink></li>
-          <li><RouterLink to="/shop">Shop</RouterLink></li>
+          <li><RouterLink to="/shop">Candle Collection</RouterLink></li>
           <li><RouterLink to="/about">About</RouterLink></li>
           <li><RouterLink to="/contact">Contact</RouterLink></li>
           <li>

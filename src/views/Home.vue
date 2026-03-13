@@ -27,8 +27,8 @@ import { RouterLink } from 'vue-router'
         <h2 class="text-center">My Story</h2>
         <p class="preview-text">
           Hi ! I'm Tasha, the creator of Curled Cat Co.  <br> <br>
-      My love for candles started when I visited my fiancé, Justin, in the USA. I quickly became obsessed with them 
-      the cozy glow, the beautiful jars, and especially the incredible scents. But after buying a few, I ran into a problem many candle lovers know too well: some looked amazing, but once you lit them… barely any scent at all. That was such a letdown.
+      My love for candles started when I visited my fiancé Justin, in the USA. I quickly became obsessed with them 
+      the cozy glow, the beautiful jars, and especially the incredible scents. But after buying a few, I ran into a problem many candle lovers know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all. That was such a letdown.
       As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
       candles. <br> <br>
       

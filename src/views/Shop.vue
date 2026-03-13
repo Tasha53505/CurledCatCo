@@ -30,7 +30,7 @@ const closeModal = () => {
   <div class="shop">
     <div class="shop-header">
       <div class="container">
-        <h1>Our Shop</h1>
+        <h1>Curled Cat Co. Candle Collection</h1>
         <p>Discover our collection of handcrafted candles, each with its own unique story.</p>
       </div>
     </div>
@@ -60,7 +60,27 @@ const closeModal = () => {
         <button class="carousel-nav next" type="button" @click="next">›</button>
       </div>
 
-      <!-- <div class="filters">
+  
+
+      <div
+        v-if="modalOpen"
+        class="modal"
+        @click.self="closeModal"
+        @keydown.escape.window="closeModal"
+      >
+        <div class="modal-content">
+          <button class="modal-close" type="button" @click="closeModal">×</button>
+          <img :src="modalProduct?.image" :alt="modalProduct?.name" />
+          <div class="modal-caption">{{ modalProduct?.name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+
+    <!-- <div class="filters">
         <div class="filter-section">
           <h3>Jar Color</h3>
           <label>
@@ -108,22 +128,7 @@ const closeModal = () => {
         </div>
       </div> -->
 
-      <div
-        v-if="modalOpen"
-        class="modal"
-        @click.self="closeModal"
-        @keydown.escape.window="closeModal"
-      >
-        <div class="modal-content">
-          <button class="modal-close" type="button" @click="closeModal">×</button>
-          <img :src="modalProduct?.image" :alt="modalProduct?.name" />
-          <div class="modal-caption">{{ modalProduct?.name }}</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
+      
 <style scoped>
 .shop {
   min-height: 100vh;
