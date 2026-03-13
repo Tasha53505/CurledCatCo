@@ -40,7 +40,7 @@ const closeModal = () => {
         <h2>Shop Not Available Yet 🐈‍⬛</h2>
         <p>
           As my business has not launched yet and this site serves purely as a showcase of my work,
-          buying candles is not available yet. My work may not be copied, stolen, or referenced.
+          buying my candles is not available yet. My work may not be copied, stolen, or referenced.
         </p>
       </div>
 
