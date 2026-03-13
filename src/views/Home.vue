@@ -70,7 +70,7 @@ import { RouterLink } from 'vue-router'
           </div>
         </div>
         <div class="text-center mt-3">
-          <RouterLink to="/shop" class="explore-button">Explore Full Shop</RouterLink>
+          <RouterLink to="/shop" class="explore-button">Explore Full Collection</RouterLink>
         </div>
       </div>
     </section>
