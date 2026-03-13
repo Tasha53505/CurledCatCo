@@ -24,21 +24,20 @@ import { RouterLink } from 'vue-router'
     <!-- About Preview -->
     <section class="about-preview py-3">
       <div class="container">
-        <h2 class="text-center">Our Story</h2>
+        <h2 class="text-center">My Story</h2>
         <p class="preview-text">
-          I fell in love with candles when I visited my fiancé in the USA. I became obsessed with
-          Bath and Body Works candles / candles in general, but found the costs were adding up and
-          they didn't have all the scents I wanted. As a girl who loves art, works in Tech and is a
-          cat lover, I wanted to make my own and share them with fellow cat lovers like me?
-          Expressing my creativity through candle making has been a wonderful journey, and I'm
-          excited to share it with you all.
+          Hi ! I'm Tasha, the creator of Curled Cat Co.  <br> <br>
+      My love for candles started when I visited my fiancé, Justin, in the USA. I quickly became obsessed with them 
+      the cozy glow, the beautiful jars, and especially the incredible scents. But after buying a few, I ran into a problem many candle lovers know too well: some looked amazing, but once you lit them… barely any scent at all. That was such a letdown.
+      As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
+      candles. <br> <br>
+      
+      My goal with Curled Cat Co is simple: create sleek, modern candles inspired by our love of cats, 
+      while making sure they actually fill your room with delicious fragrance when you light them.
+      Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
         </p>
-        <p class="preview-text">
-          Every Curled Cat Co candle is a labor of love. Our logo was drawn based on my cat, Norman.
-          I'm constantly thinking of new scent ideas, designs, and cat-inspired names. Each candle
-          is hand-poured and finished with a unique handcrafted pawprint on top.
-        </p>
-        <RouterLink to="/about" class="read-more-link">Read Full Story →</RouterLink>
+   
+        <RouterLink :to="{ path: '/about', hash: '#myStory' }" class="read-more-link">Read Full Story →</RouterLink>
       </div>
     </section>
 

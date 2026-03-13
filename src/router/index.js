@@ -41,6 +41,12 @@ const router = createRouter({
       component: Cart,
     },
   ],
+   scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' }
+    }
+    return { top: 0 }
+  },
 })
 
 export default router

@@ -11,37 +11,7 @@ import { RouterLink } from 'vue-router'
     </div>
 
     <div class="container about-content">
-      <section class="story-section">
-        <h2>My Story</h2>
-        <p>
-          Hello ! My name is Tasha and I love candles and cats. I started Curled Cat Co as a way to
-          combine my passions and share them with fellow cat lovers. <br /><br />I fell in love with
-          candles when I visited my fiancé in the USA. I became obsessed with Bath and Body Works
-          candles / candles in general, but found the costs were adding up and they didn't have all
-          the scents I wanted. As a girl who loves art, works in tech and is loves cats, I wanted to
-          make my own and share them with fellow cat lovers like me. Expressing my creativity
-          through candle making has been and is a wonderful journey, and I'm excited to share it
-          with you all.
-        </p>
-        <p>
-          The idea of Curled Cat Co was born from my passion for candles and my love for cats. I
-          wanted to create something special that celebrated both. Our logo was hand-drawn based on
-          my own cat, Norman, who inspired the whole journey.
-        </p>
-
-        <p>
-          I didn't dive head first into making candles. I did 5 months of intense research before I
-          even MADE my first candle. I wanted to understand everything I could before I started. I
-          studied the different waxes, jars, and wick types (LX, CDN, etc.), hot and cold throw
-          performance (How strong the scent is when a candle is lit and how strong a scent is from
-          an unlit candle), How wax pools work and what is the ideal melting poolp per hour,
-          fragrance quality and load percentages, vessel diameters, environmental factors (like
-          airflow or room size affecting hot throw), as well as many common issues I've seen in the
-          community: i.e sinkholes, mushrooming, tunneling, airbubbles,and frosting and how to avoid
-          / fix them.
-        </p>
-      </section>
-
+    
       <section class="what-makes-us-special">
         <h2>What Makes Us Special</h2>
         <div class="special-features">
@@ -105,9 +75,41 @@ import { RouterLink } from 'vue-router'
         </p>
       </section>
 
+        <section class="story-section" id="myStory">
+        <h2>My Story</h2>
+       Hi ! I'm Tasha, the creator of Curled Cat Co.  <br> <br>
+      My love for candles started when I visited my fiancé, Justin, in the USA. I quickly became obsessed with them 
+      the cozy glow, the beautiful jars, and especially the incredible scents. But after buying a few, I ran into a problem many candle lovers know too well: some looked amazing, but once you lit them… barely any scent at all. That was such a letdown.
+      As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
+      candles. <br> <br>
+      
+      My goal with Curled Cat Co is simple: create sleek, modern candles inspired by our love of cats, 
+      while making sure they actually fill your room with delicious fragrance when you light them.
+      Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
+      <br> <br>
+
+          <p class="preview-text">
+          Every Curled Cat Co candle is a labor of love. Our logo was drawn based on my cat, Norman.
+          I'm constantly thinking of new scent ideas, designs, and cat-inspired names. Each candle
+          is hand-poured and finished with a unique handcrafted pawprint on top.
+        </p>
+        
+        <p>
+          I didn't dive head first into making candles. I did 5 months of intense research before I
+          even MADE my first candle. I wanted to understand everything I could before I started. I
+          studied the different waxes, jars, and wick types (LX, CDN, etc.), hot and cold throw
+          performance (How strong the scent is when a candle is lit and how strong a scent is from
+          an unlit candle), How wax pools work and what is the ideal melting poolp per hour,
+          fragrance quality and load percentages, vessel diameters, environmental factors (like
+          airflow or room size affecting hot throw), as well as many common issues I've seen in the
+          community: i.e sinkholes, mushrooming, tunneling, airbubbles,and frosting and how to avoid
+          / fix them.
+        </p>
+      </section>
+
       <section class="cta-section">
         <h2>Ready to Light Up Your Home?</h2>
-        <RouterLink to="/shop" class="shop-button">Shop Our Collection</RouterLink>
+        <RouterLink to="/shop" class="shop-button">View Our Collection</RouterLink>
       </section>
     </div>
   </div>
