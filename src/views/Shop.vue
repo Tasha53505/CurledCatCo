@@ -3,27 +3,6 @@ import ProductCard from '@/components/ProductCard.vue'
 import { ref } from 'vue'
 import { products } from '@/stores/products'
 
-const currentIndex = ref(0)
-const modalOpen = ref(false)
-const modalProduct = ref(null)
-
-const prev = () => {
-  currentIndex.value = (currentIndex.value - 1 + products.length) % products.length
-}
-
-const next = () => {
-  currentIndex.value = (currentIndex.value + 1) % products.length
-}
-
-const openModal = (product) => {
-  modalProduct.value = product
-  modalOpen.value = true
-}
-
-const closeModal = () => {
-  modalOpen.value = false
-  modalProduct.value = null
-}
 </script>
 
 <template>
@@ -44,7 +23,26 @@ const closeModal = () => {
         </p>
       </div>
 
-      <div class="carousel">
+      <div class="products-section">
+  <h2>All Products</h2>
+
+  <div class="products-grid">
+    <RouterLink
+      v-for="product in products"
+      :key="product.id"
+      :to="{ name: 'Product', params: { id: product.id } }"
+      class="product-link"
+    >
+      <div class="product-card">
+        <img :src="product.image" :alt="product.name" />
+        <h3>{{ product.name }}</h3>
+        <!-- <p>${{ product.price }}</p> -->
+      </div>
+    </RouterLink>
+  </div>
+</div>
+
+      <!-- <div class="carousel">
         <button class="carousel-nav prev" type="button" @click="prev">‹</button>
         <div class="carousel-track">
           <div
@@ -58,7 +56,7 @@ const closeModal = () => {
           </div>
         </div>
         <button class="carousel-nav next" type="button" @click="next">›</button>
-      </div>
+      </div> -->
 
   
 

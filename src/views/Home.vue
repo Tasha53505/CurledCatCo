@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { products } from '@/stores/products'
+
 </script>
 
 <template>
@@ -7,7 +9,7 @@ import { RouterLink } from 'vue-router'
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1>Curled Cat Co</h1>
+        <h1>Curled Cat Co.</h1>
         <p class="hero-tagline">Handcrafted Candles for Cat Lovers</p>
         <p class="hero-description">
           <!-- Each candle is lovingly made with quality wax, hand-painted with a pawprint, and named
@@ -17,7 +19,8 @@ import { RouterLink } from 'vue-router'
           the unique charm of our kitty friends. Bring a touch of calm and cozy luxury to your space
           and Each candle invites you to slow down, unwind, and enjoy the little moments in life.
         </p>
-        <RouterLink to="/shop" class="cta-button">View Curled Cat Co. Candle Collection</RouterLink>
+        <RouterLink   :to="{ path: '/', hash: '#featuredCollection' }"
+          class="cta-button">View Curled Cat Co. Candle Collection</RouterLink>
       </div>
     </section>
 
@@ -32,7 +35,7 @@ import { RouterLink } from 'vue-router'
       As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
       candles. <br> <br>
       
-      My goal with Curled Cat Co is simple: create sleek, modern candles inspired by our love of cats, 
+      My goal with Curled Cat Co. is simple: create sleek, modern candles inspired by our love of cats, 
       while making sure they actually fill your room with delicious fragrance when you light them.
       Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
         </p>
@@ -44,43 +47,46 @@ import { RouterLink } from 'vue-router'
     <!-- Featured Products -->
     <section class="featured-products py-3">
       <div class="container">
-        <h2 class="text-center">Featured Collection</h2>
+        <h2 class="text-center" id="featuredCollection">Featured Collection</h2>
         <p class="featured-description text-center">
           Discover our signature scents, each with a story as unique as your favorite feline.
         </p>
-        <div class="products-grid">
-          <div class="product-preview">
-            <div class="featured-image">
-              <img src="/ConceptArt/IdleHours.png" alt="Idle Hours Candle">
-            </div>
-            <h3>Idle Hours</h3>
-            <p>For moments of pure relaxation</p>
-            <p class="featured-price"></p>
-          </div>
-          <div class="product-preview">
-            <div class="featured-image black-jar"></div>
-            <h3>Pollen Paws</h3>
-            <p>Coming soon....</p>
-            <p class="featured-price"></p>
-          </div>
-          <div class="product-preview">
-            <div class="featured-image black-jar"></div>
-            <h3>Purr-fectly Pink</h3>
-            <!-- <p>Juicy strawberry softened with creamy vanilla and spun sugar.</p> -->
-            <p>Coming soon....</p>
-            <p class="featured-price"></p>
-          </div>
-        </div>
-        <div class="text-center mt-3">
+          <div class="products-grid">
+  <RouterLink
+    v-for="product in products.slice(0, 3)"
+    :key="product.id"
+    :to="{ name: 'Product', params: { id: product.id } }"
+    class="product-preview"
+  >
+    <div class="featured-image">
+      <img :src="product.image" :alt="product.name" />
+    </div>
+
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p v-if="product.price" class="featured-price">
+      ${{ product.price }}
+    </p>
+  </RouterLink>
+
+  
+</div>
+
+   <div class="text-center mt-3">
           <RouterLink to="/shop" class="explore-button">Explore Full Collection</RouterLink>
+
         </div>
+     
       </div>
     </section>
+
+
+
 
     <!-- Why Choose Us -->
     <section class="why-us py-3">
       <div class="container">
-        <h2 class="text-center mb-3">Why Curled Cat Co</h2>
+        <h2 class="text-center mb-3">Why Curled Cat Co.</h2>
         <div class="features">
           <div class="feature">
             <div class="feature-icon">🖐️</div>

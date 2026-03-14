@@ -7,7 +7,7 @@ import { RouterLink } from 'vue-router'
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4>Curled Cat Co</h4>
+          <h4>Curled Cat Co.</h4>
           <p>
             Handcrafted candles inspired by our feline friends. Each candle is lovingly made with
             quality wax and brushed with a hand-painted pawprint.

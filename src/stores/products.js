@@ -9,8 +9,8 @@ export const products = [
     jarColor: 'black',
     labelColor: 'white',
     size: '9 oz',
-    price: 12,
-    image: '/placeholder-candle.svg',
+    // price: 12,
+    image: 'public/ConceptArt/IdleHours.png',
     // optional video preview to play on hover
     video: '/placeholder-video.mp4',
   },
@@ -23,7 +23,7 @@ export const products = [
     jarColor: 'clear',
     labelColor: 'transparent',
     size: '9 oz',
-    price: 20,
+    // price: 20,
     image: '/placeholder-candle.svg',
     // no video available for this product (will just show static image)
   },
@@ -36,7 +36,7 @@ export const products = [
     jarColor: 'black',
     labelColor: 'white',
     size: '9 oz',
-    price: 12,
+    // price: 12,
     image: '/placeholder-candle.svg',
     // also no video for now
   },

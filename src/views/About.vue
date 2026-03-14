@@ -6,7 +6,7 @@ import { RouterLink } from 'vue-router'
   <div class="about">
     <div class="about-header">
       <div class="container">
-        <h1>About Curled Cat Co</h1>
+        <h1>About Curled Cat Co.</h1>
       </div>
     </div>
 
@@ -71,7 +71,7 @@ import { RouterLink } from 'vue-router'
         <p>
           We want our customers to feel the care and passion that goes into each candle. Whether
           you're a cat lover, candle enthusiast, or someone looking for a meaningful gift, we
-          believe there's a Curled Cat Co candle for you.
+          believe there's a Curled Cat Co. candle for you.
         </p>
       </section>
 
@@ -83,13 +83,13 @@ import { RouterLink } from 'vue-router'
       As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
       candles. <br> <br>
       
-      My goal with Curled Cat Co is simple: create sleek, modern candles inspired by our love of cats, 
+      My goal with Curled Cat Co. is simple: create sleek, modern candles inspired by our love of cats, 
       while making sure they actually fill your room with delicious fragrance when you light them.
       Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
       <br> <br>
 
           <p class="preview-text">
-          Every Curled Cat Co candle is a labor of love. Our logo was drawn based on my cat, Norman.
+          Every Curled Cat Co. candle is a labor of love. Our logo was drawn based on my cat, Norman.
           I'm constantly thinking of new scent ideas, designs, and cat-inspired names. Each candle
           is hand-poured and finished with a unique handcrafted pawprint on top.
         </p>

@@ -10,18 +10,20 @@ const { cartItemCount } = useCart()
     <div class="container">
       <nav class="navbar">
         <RouterLink to="/" class="logo">
-          <span class="logo-text">Curled Cat Co</span>
+          <img src="/public/CurledCatLogo.png" alt="CurledCatCo Logo" class="logo-image">
         </RouterLink>
+                  <!-- <span class="logo-text logo">Curled Cat Co</span> -->
+
         <ul class="nav-links">
           <li><RouterLink to="/">Home</RouterLink></li>
           <li><RouterLink to="/shop">Candle Collection</RouterLink></li>
           <li><RouterLink to="/about">About</RouterLink></li>
           <li><RouterLink to="/contact">Contact</RouterLink></li>
           <li>
-            <RouterLink to="/cart" class="cart-link">
+            <!-- <RouterLink to="/cart" class="cart-link">
               Cart
               <span v-if="cartItemCount > 0" class="cart-badge">{{ cartItemCount }}</span>
-            </RouterLink>
+            </RouterLink> -->
           </li>
         </ul>
       </nav>
@@ -30,7 +32,7 @@ const { cartItemCount } = useCart()
 </template>
 
 <style scoped>
-.header {
+/* .header {
   border-bottom: 1px solid #000000;
   padding: 1.5rem 0;
   background-color: #ffffff;
@@ -40,11 +42,36 @@ const { cartItemCount } = useCart()
   display: flex;
   justify-content: space-between;
   align-items: center;
+} */
+
+.header {
+  border-bottom: 1px solid #000000;
+  background-color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90px;   /* controls header height */
+}
+
+.logo-image {
+  height: 22vh;
+  width: auto;
+  transform: scale(1.12);
+    transform-origin: center;
+    
+
+
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
+    display: flex;
+  align-items: center;
+  overflow: visible;
 }
 
 .logo-text {
@@ -89,6 +116,9 @@ const { cartItemCount } = useCart()
   font-size: 0.75rem;
   font-weight: 700;
 }
+
+
+
 
 @media (max-width: 768px) {
   .navbar {
