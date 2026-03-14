@@ -42,10 +42,11 @@ ${message}`
   }catch (err) {
   console.error(err)
 
-  return {
-    statusCode: 500,
-    body: JSON.stringify({ error: err.message }),
-  }
+    return {
+      statusCode: response.status,
+      body: await response.text(),
+    }
+
 }
 
 }
