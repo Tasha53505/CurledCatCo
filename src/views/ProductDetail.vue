@@ -42,10 +42,10 @@ const goBack = () => {
               <strong>Jar:</strong>
               {{ product.jarColor.charAt(0).toUpperCase() + product.jarColor.slice(1) }}
             </div>
-            <div><strong>Price:</strong> ${{ product.price }}</div>
+            <!-- <div><strong>Price:</strong> ${{ product.price }}</div> -->
           </div>
 
-          <button class="add-to-cart" @click="handleAddToCart">Add to cart</button>
+          <!-- <button class="add-to-cart" @click="handleAddToCart">Add to cart</button> -->
         </div>
       </div>
 
