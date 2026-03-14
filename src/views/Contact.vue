@@ -136,7 +136,7 @@ const handleSubmit = async () => {
           <ul class="social-links">
             <!-- <li><a href="#" target="_blank">Instagram</a></li> -->
             <li><a href="https://www.tiktok.com/@curledcatco" target="_blank">TikTok</a></li>
-            <li><a href="https://www.facebook.com/people/Curled-Cat-Co-Candles/61580700661178/" target="_blank">Facebook Page</a></li>
+            <li><a href="https://www.facebook.com/people/Curled-Cat-Co-Candles/61580700661178/" target="_blank">Facebook</a></li>
           </ul>
         </div>
 
