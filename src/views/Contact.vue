@@ -139,6 +139,7 @@ const handleSubmit = async () => {
             <li><a href="https://www.facebook.com/people/Curled-Cat-Co-Candles/61580700661178/" target="_blank">Facebook</a></li>
           </ul>
         </div>
+        <!-- Trigger deployment -->
 
         <!-- <div class="info-card">
           <h3>💌 Newsletter</h3>
