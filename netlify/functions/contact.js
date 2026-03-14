@@ -16,7 +16,7 @@ export const handler = async (event) => {
   })
 
   await client.messages.create(process.env.MAILGUN_DOMAIN, {
-    from: `Website Contact <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+    from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
     to: ["curledcatco@gmail.com"],
     subject,
     text: `Name: ${name}
