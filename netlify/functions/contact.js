@@ -39,12 +39,13 @@ ${message}`
       statusCode: 200,
       body: JSON.stringify({ success: true }),
     }
-  } catch (err) {
-    console.error(err)
+  }catch (err) {
+  console.error(err)
 
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: "Email failed to send" }),
-    }
+  return {
+    statusCode: 500,
+    body: JSON.stringify({ error: err.message }),
   }
+}
+
 }
