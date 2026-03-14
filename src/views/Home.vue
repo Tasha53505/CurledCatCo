@@ -27,7 +27,7 @@ import { RouterLink } from 'vue-router'
         <h2 class="text-center">My Story</h2>
         <p class="preview-text">
           Hi ! I'm Tasha, the creator of Curled Cat Co.  <br> <br>
-      My love for candles started when I visited my fiancé Justin, in the USA. I quickly became obsessed with them 
+      My love for candles started when I visited my fiancé, in the USA. I quickly became obsessed with them 
       the cozy glow, the beautiful jars, and especially the incredible scents. But after buying a few, I ran into a problem many candle lovers know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all. That was such a letdown.
       As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
       candles. <br> <br>
@@ -50,22 +50,25 @@ import { RouterLink } from 'vue-router'
         </p>
         <div class="products-grid">
           <div class="product-preview">
-            <div class="featured-image black-jar"></div>
+            <div class="featured-image">
+              <img src="/ConceptArt/IdleHours.png" alt="Idle Hours Candle">
+            </div>
             <h3>Idle Hours</h3>
             <p>For moments of pure relaxation</p>
-            <p class="featured-price">$12</p>
+            <p class="featured-price"></p>
           </div>
           <div class="product-preview">
             <div class="featured-image black-jar"></div>
-            <h3>Idle Hours</h3>
-            <p>For moments of pure relaxation</p>
-            <p class="featured-price">$12</p>
+            <h3>Pollen Paws</h3>
+            <p>Coming soon....</p>
+            <p class="featured-price"></p>
           </div>
           <div class="product-preview">
             <div class="featured-image black-jar"></div>
-            <h3>Idle Hours</h3>
-            <p>For moments of pure relaxation</p>
-            <p class="featured-price">$12</p>
+            <h3>Purr-fectly Pink</h3>
+            <!-- <p>Juicy strawberry softened with creamy vanilla and spun sugar.</p> -->
+            <p>Coming soon....</p>
+            <p class="featured-price"></p>
           </div>
         </div>
         <div class="text-center mt-3">
@@ -209,14 +212,20 @@ import { RouterLink } from 'vue-router'
 }
 
 .featured-image {
-  width: 150px;
-  height: 150px;
+  width:45vh;
+  height: 45vh;
   margin: 0 auto 1.5rem;
   border: 2px solid #000000;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .featured-image.black-jar {

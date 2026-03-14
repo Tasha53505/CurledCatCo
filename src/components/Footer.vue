@@ -17,7 +17,7 @@ import { RouterLink } from 'vue-router'
           <h4>Quick Links</h4>
           <ul>
             <li><RouterLink to="/">Home</RouterLink></li>
-            <li><RouterLink to="/shop">Shop</RouterLink></li>
+            <li><RouterLink to="/shop">Candle Collection</RouterLink></li>
             <li><RouterLink to="/about">About</RouterLink></li>
             <li><RouterLink to="/contact">Contact</RouterLink></li>
           </ul>

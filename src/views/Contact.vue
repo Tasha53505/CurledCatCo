@@ -134,13 +134,13 @@ const handleSubmit = async () => {
           <h3>🐱 Follow Us</h3>
           <p>Follow Curled Cat Co on social media for updates, new scents, and cat content!</p>
           <ul class="social-links">
-            <li><a href="#" target="_blank">Instagram</a></li>
-            <li><a href="#" target="_blank">TikTok</a></li>
-            <li><a href="#" target="_blank">Facebook</a></li>
+            <!-- <li><a href="#" target="_blank">Instagram</a></li> -->
+            <li><a href="https://www.tiktok.com/@curledcatco" target="_blank">TikTok</a></li>
+            <li><a href="https://www.facebook.com/people/Curled-Cat-Co-Candles/61580700661178/" target="_blank">Facebook</a></li>
           </ul>
         </div>
 
-        <div class="info-card">
+        <!-- <div class="info-card">
           <h3>💌 Newsletter</h3>
           <p>
             Sign up for our newsletter to be the first to hear about new scents and special offers!
@@ -150,7 +150,7 @@ const handleSubmit = async () => {
         <div class="info-card">
           <h3>📍 Shipping</h3>
           <p>We currently ship within New Zealand.</p>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

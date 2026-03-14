@@ -108,7 +108,8 @@ import { RouterLink } from 'vue-router'
       </section>
 
       <section class="cta-section">
-        <h2>Ready to Light Up Your Home?</h2>
+        <!-- <h2>Ready to Light Up Your Home?</h2> -->
+        <h2>Want To See Our Candles?</h2>
         <RouterLink to="/shop" class="shop-button">View Our Collection</RouterLink>
       </section>
     </div>
