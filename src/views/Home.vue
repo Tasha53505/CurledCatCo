@@ -7,7 +7,7 @@ import { RouterLink } from 'vue-router'
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1>Curled Cat Co</h1>
+        <h1>Curled Cat Co TEST</h1>
         <p class="hero-tagline">Handcrafted Candles for Cat Lovers</p>
         <p class="hero-description">
           <!-- Each candle is lovingly made with quality wax, hand-painted with a pawprint, and named
