@@ -2,10 +2,10 @@
 export const products = [
   {
     id: 1,
+    status:'active',
     name: 'Idle Hours',
     scentDescription: 'Sparkling Peach And Ripe Berries With A Creamy Vanilla Finish',
-    description:
-      'A serene blend for moments of pure relaxation. Just like a cat spending the day doing absolutely nothing, this candle captures that perfect laziness.',
+    description: 'A delicious peachy berry blend for moments of pure relaxation. Just like Cats who spend hours upon hours doing nothing and relaxing, this candle is meant to be the perfect accompanyment for those lazy days.',
     waxColor: '#D4A574', // Warm honey/tan colored wax
     jarColor: 'black',
     labelColor: 'white',
@@ -17,7 +17,7 @@ export const products = [
      { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
     { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
     { type: 'video', src: '/Candles/IdleHours/ConceptArt/Idle_Hours.mp4' },
-    // { type: 'video', src: '/Candles/IdleHours/Videos/placeholder-video-IdleHours.mp4' },
+    { type: 'video', src: '/Candles/IdleHours/Videos/placeholder-video-IdleHours.mp4' },
   ],
 
 
@@ -32,24 +32,46 @@ export const products = [
         // optional video preview to play on hover
   
   },
-  {
+    {
     id: 2,
-    name: 'Pollen Paws',
+    status: 'Coming Soon',
+    name: 'Candle Coming Soon',
+    scentDescription: 'Coming Soon...',
     description:
-      'Coming Soon...',
-    waxColor: '#000000, #ffb325',
-    jarColor: 'clear',
-    labelColor: 'transparent',
+      'Description coming soon.',
+    waxColor: '#D4A574', // Warm honey/tan colored wax
+    jarColor: 'black',
+    labelColor: 'white',
     size: '9 oz',
-    // price: 20,
-    image: '/placeholder-candle.svg',
-    // no video available for this product (will just show static image)
+    // price: 12,
+
+    // Carosel product details images / videps
+      media: [
+     { type: 'image', src: '/Candles/X' },
+    { type: 'image', src: '/Candles/IdleHours/x' },
+    { type: 'video', src: '/Candles/IdleHours/x' },
+    // { type: 'video', src: '/Candles/IdleHours/Videos/placeholder-video-IdleHours.mp4' },
+  ],
+
+
+        conceptArtMedia: [
+          { type: 'image', src: '/Candles/IdleHours/ConceptArt/x' },
+          { type: 'image', src: '/Candles/IdleHours/ConceptArt/x' },
+          { type: 'video', src: '/Candles/IdleHours/ConceptArt/x' }
+        ],
+
+    designStory:
+          '',
+  
   },
   {
     id: 3,
-    name: '',
+     status: 'Coming Soon',
+    name: 'Candle Coming Soon',
+    scentDescription: 'Coming Soon...',
     description:
-      '',
+      'Description coming soon.',
+      
     waxColor: '#D4A574',
     jarColor: 'black',
     labelColor: 'white',

@@ -83,6 +83,8 @@ import { RouterLink } from 'vue-router'
       As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
       candles. <br> <br>
       
+      My love for candles started when I visited my fiancé, in the USA. I quickly became obsessed with them ! The pretty, soft glow, the beautiful jars, and most importantly the incredible scents. But after buying a few, I ran into a problem many of us know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all. That was such a letdown. As someone who loves Candles, art, works in tech, and is completely obsessed with cats, I decided I wanted to start making my own candles. <br> <br> My goal with Curled Cat Co. is simple: create sleek, modern candles inspired by our love of cats, while making sure they actually fill your room with delicious fragrance when you light them. <br> <br> Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
+
       My goal with Curled Cat Co. is simple: create sleek, modern candles inspired by our love of cats, 
       while making sure they actually fill your room with delicious fragrance when you light them.
       Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.

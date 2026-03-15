@@ -5,7 +5,7 @@ import { products } from '@/stores/products'
 
 </script>
 
-<template>
+<template >
   <div class="shop">
     <div class="shop-header">
       <div class="container">
@@ -15,7 +15,7 @@ import { products } from '@/stores/products'
     </div>
 
     <div class="container shop-content">
-      <div class="coming-soon">
+      <div class="">
         <h2>Shop Not Available Yet 🐈‍⬛</h2>
         <p>
           As my business has not launched yet and this site serves purely as a showcase of my work,
@@ -23,36 +23,65 @@ import { products } from '@/stores/products'
         </p>
       </div>
 
-      <div class="products-section">
-  <h2>All Candles</h2>
+ <div class="products-section">
+        <h2>All Candles</h2>
 
-  <div class="products-grid">
-    <RouterLink
-      v-for="product in products"
-      :key="product.id"
-      :to="{ name: 'Product', params: { id: product.id } }"
-      class="product-link"
-    >
-      <div class="product-card">
+        <div class="products-grid">
 
-<img
-  v-if="product.media && product.media.length"
-  :src="product.media[0].src"
-  :alt="product.name"
-/>
+          <template
+            v-for="product in products"
+            :key="product.id"
+          >
 
-        <h3>{{ product.name }}</h3>
-        <p class="scent-description">
-            {{ product.scentDescription }}
-          </p>     
-          
-          <!-- <p>${{ product.price }}</p> -->
-      </div>
-    </RouterLink>
-  </div>
-</div>
+            <!-- Active Products -->
+            <RouterLink
+              v-if="product.status === 'active'"
+              :to="{ name: 'Product', params: { id: product.id } }"
+              class="product-link"
+            >
+              <div class="product-card">
+                <img
+                  v-if="product.media?.length"
+                  :src="product.media[0].src"
+                  :alt="product.name"
+                />
+
+                <h3>{{ product.name }}</h3>
+
+                <p class="scent-description">
+                  {{ product.scentDescription }}
+                </p>
+              </div>
+            </RouterLink>
+
+            <!-- Coming Soon -->
+            <div
+              v-else
+              class="product-link coming-soon"
+            >
+              <div class="product-card">
+                <img
+                  v-if="product.media?.length"
+                  :src="product.media[0].src"
+                  :alt="product.name"
+                />
+
+                <h3>{{ product.name }}</h3>
+
+                <p class="scent-description">
+                  {{ product.scentDescription }}
+                </p>
+              </div>
+            </div>
+
+          </template>
+
+        </div>
+      
 
     </div>
+
+  </div>
   </div>
 </template>
 
@@ -140,6 +169,12 @@ import { products } from '@/stores/products'
 
       
 <style scoped>
+
+.coming-soon {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .scent-description {
   font-size: 0.9rem;
   color: #666;

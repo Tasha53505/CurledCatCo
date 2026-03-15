@@ -1,44 +1,28 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { products } from '@/stores/products'
-import { ref } from 'vue'
-
-
-const playVideo = (event) => {
-  const video = event.currentTarget.querySelector('video')
-  if (video) {
-    video.play()
-  }
-}
-
-const pauseVideo = (event) => {
-  const video = event.currentTarget.querySelector('video')
-  if (video) {
-    video.pause()
-    video.currentTime = 0
-  }
-}
-
-
 </script>
 
 <template>
   <div class="home">
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
         <h1>Curled Cat Co.</h1>
         <p class="hero-tagline">Handcrafted Candles for Cat Lovers</p>
         <p class="hero-description">
-          <!-- Each candle is lovingly made with quality wax, hand-painted with a pawprint, and named
-          after our kitty friends unique personalities. Experience the art of slow living. -->
-
           Every candle is poured with care, finished with a hand-painted pawprint, and inspired by
           the unique charm of our kitty friends. Bring a touch of calm and cozy luxury to your space
           and every candle invites you to slow down, unwind, and enjoy the little moments in life.
         </p>
-        <RouterLink   :to="{ path: '/', hash: '#featuredCollection' }"
-          class="cta-button">View Curled Cat Co. Candle Collection</RouterLink>
+
+        <RouterLink
+          :to="{ path: '/', hash: '#featuredCollection' }"
+          class="cta-button"
+        >
+          View Curled Cat Co. Candle Collection
+        </RouterLink>
       </div>
     </section>
 
@@ -46,98 +30,131 @@ const pauseVideo = (event) => {
     <section class="about-preview py-3">
       <div class="container">
         <h2 class="text-center">My Story</h2>
-        <p class="preview-text">
-          Hi ! I'm Tasha, the creator of Curled Cat Co.  <br> <br>
-      My love for candles started when I visited my fiancé, in the USA. I quickly became obsessed with them ! 
-      The cozy glow, the beautiful jars, and most importantly the incredible scents. But after buying a few, I ran into a problem many of us know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all. That was such a letdown.
-      As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
-      candles. <br> <br>
-      
-      My goal with Curled Cat Co. is simple: create sleek, modern candles inspired by our love of cats, 
-      while making sure they actually fill your room with delicious fragrance when you light them. <br> <br>
 
-      Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
-        </p>
-   
-        <RouterLink :to="{ path: '/about', hash: '#myStory' }" class="read-more-link">Read Full Story →</RouterLink>
+        <p class="preview-text">
+          Hi! I'm Tasha, the creator of Curled Cat Co.
+          <br><br>
+My love for candles started when I visited my fiancé, in the USA.
+ I quickly became obsessed with them ! The pretty, soft glow, the beautiful jars, and most importantly the incredible scents. 
+ But after buying a few, I ran into a problem many of us know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all.
+  That was such a letdown. As someone who loves Candles, art, works in tech, and is completely obsessed with cats, I decided I wanted to start making my own candles.  <br> <br> 
+  Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.     
+   </p>
+
+        <RouterLink
+          :to="{ path: '/about', hash: '#myStory' }"
+          class="read-more-link"
+        >
+          Read Full Story →
+        </RouterLink>
       </div>
     </section>
-
-    <!-- Featured Products -->
+<!-- Featured Products -->
     <section class="featured-products py-3">
       <div class="container">
-        <h2 class="text-center" id="featuredCollection">Featured Collection</h2>
+        <h2 class="text-center" id="featuredCollection">
+          Featured Collection
+        </h2>
+
         <p class="featured-description text-center">
           Discover our signature scents, each with a story as unique as your favorite feline.
         </p>
-          <div class="products-grid">
-  <RouterLink
-    v-for="product in products.slice(0, 3)"
-    :key="product.id"
-    :to="{ name: 'Product', params: { id: product.id } }"
-    class="product-preview"
-  >
-<div
-  class="featured-image"
-  @mouseenter="playVideo"
-  @mouseleave="pauseVideo"
->
-  <img
-    :src="product.media ? product.media[0].src : product.image"
-    :alt="product.name"
-    class="preview-image"
-  />
 
-  <video
-    :src="product.media && product.media[0].type === 'video' ? product.media[0].src : ''"
-    class="preview-video"
-    muted
-    loop
-    playsinline
-  ></video>
-</div>
+        <div class="products-grid">
 
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.description }}</p>
-    <p v-if="product.price" class="featured-price">
-      ${{ product.price }}
-    </p>
-  </RouterLink>
+          <template
+            v-for="product in products.slice(0, 3)"
+            :key="product.id"
+          >
 
-  
-</div>
+            <!-- Active -->
+            <RouterLink
+              v-if="product.status === 'active'"
+              :to="{ name: 'Product', params: { id: product.id } }"
+              class="product-preview"
+            >
+              <div class="featured-image">
+                <img
+                  :src="product.media?.[0]?.src || product.image"
+                  :alt="product.name"
+                  class="preview-image"
+                />
 
-   <div class="text-center mt-3">
-          <RouterLink to="/shop" class="explore-button">Explore Full Collection</RouterLink>
+                <video
+                  v-if="product.media?.find(m => m.type === 'video')"
+                  :src="product.media.find(m => m.type === 'video').src"
+                  class="preview-video"
+                  muted
+                  loop
+                  autoplay
+                  playsinline
+                ></video>
+              </div>
+
+              <h3>{{ product.name }}</h3>
+              <!-- <p class="scent-description">{{ product.scentDescription }}</p> -->
+
+              <p>{{ product.description }}</p>
+
+              <p v-if="product.price" class="featured-price">
+                ${{ product.price }}
+              </p>
+            </RouterLink>
+
+            <!-- Coming Soon -->
+            <div
+              v-else
+              class="product-preview coming-soon"
+            >
+              <div class="featured-image">
+                <img
+                  :src="product.media?.[0]?.src || product.image"
+                  :alt="product.name"
+                  class="preview-image"
+                />
+              </div>
+
+              <h3>{{ product.name }}</h3>
+              <p>{{ product.description }}</p>
+            </div>
+
+          </template>
 
         </div>
-     
+
+        <div class="text-center mt-3">
+          <RouterLink to="/shop" class="explore-button">
+            Explore Full Collection
+          </RouterLink>
+        </div>
+
       </div>
     </section>
-
-
-
 
     <!-- Why Choose Us -->
     <section class="why-us py-3">
       <div class="container">
         <h2 class="text-center mb-3">Why Curled Cat Co.</h2>
+
         <div class="features">
           <div class="feature">
             <div class="feature-icon">🖐️</div>
             <h3>Hand-Poured</h3>
             <p>Each candle is poured with care and attention to detail.</p>
           </div>
+
           <div class="feature">
             <div class="feature-icon">🐾</div>
             <h3>Hand-Painted Pawprints</h3>
             <p>Every candle top features a unique hand-painted pawprint design.</p>
           </div>
+
           <div class="feature">
             <div class="feature-icon">🎨</div>
             <h3>Colorful Wax</h3>
             <p>Our signature colorful wax makes each candle a beautiful piece of art.</p>
           </div>
+
           <div class="feature">
             <div class="feature-icon">🐈‍⬛</div>
             <h3>Cat-Inspired</h3>
@@ -146,6 +163,7 @@ const pauseVideo = (event) => {
         </div>
       </div>
     </section>
+
   </div>
 </template>
 
@@ -197,6 +215,7 @@ const pauseVideo = (event) => {
 .about-preview {
   background-color: #ffffff;
 }
+
 
 .preview-text {
   font-size: 1rem;
@@ -261,6 +280,13 @@ const pauseVideo = (event) => {
   overflow: hidden;
 }
 
+.scent-description {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
 .preview-image,
 .preview-video {
   position: absolute;
@@ -274,6 +300,13 @@ const pauseVideo = (event) => {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
+.coming-soon {
+  opacity: 0.6;
+  cursor: not-allowed;
+  /* pointer-events: none; */
+}
+
 
 .featured-image:hover .preview-video {
   opacity: 1;
