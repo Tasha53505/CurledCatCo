@@ -94,9 +94,11 @@ const closeModal = () => {
 
   <video
     v-else
+    :key="media[currentIndex].src"
     :src="media[currentIndex].src"
     class="main-image"
     controls
+    muted
     @click="openModal(media[currentIndex].src, 'video')"  />
 
   <button class="nav prev" @click="prevMedia">‹</button>
