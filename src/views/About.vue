@@ -11,6 +11,40 @@ import { RouterLink } from 'vue-router'
     </div>
 
     <div class="container about-content">
+
+              <section class="story-section" id="myStory">
+        <h2>My Story</h2>
+       Hi ! I'm Tasha, the creator of Curled Cat Co.  <br> <br>
+           
+      My love for candles started when I visited my fiancé, in the USA. 
+      I quickly became obsessed with them ! The pretty, soft glow, the beautiful jars, and most importantly the incredible scents.
+ But after buying a few (More like... 30 candles), I ran into a problem many of us know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all, or the cost just became too much.
+        but once you lit them… barely any scent at all. That was such a letdown. As someone who loves Candles, art, works in tech, and is completely obsessed with cats, 
+        I decided I wanted to start making my own candles. <br> <br> It is also about the joy of making candles, creating new designs, developing signature blended scents, and embracing the art behind it all.
+         
+        <br> <br> Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
+
+
+      <br> <br>
+
+          <p class="preview-text">
+          Every Curled Cat Co. candle is a labor of love. Our logo was drawn based on my cat, Norman.
+          I'm constantly thinking of new scent ideas, designs, and cat-inspired names. Each candle
+          is hand-poured and finished with a unique handcrafted pawprint on top.
+        </p>
+        
+        <p>
+          I didn't dive head first into making candles. I did 5 months of intense research before I
+          even MADE my first candle. I wanted to understand everything I could before I started. I
+          studied the different waxes, jars, and wick types (LX, CDN, etc.), hot and cold throw
+          performance (How strong the scent is when a candle is lit and how strong a scent is from
+          an unlit candle), How wax pools work and what is the ideal melting pool per hour,
+          fragrance quality and load percentages, vessel diameters, environmental factors (like
+          airflow or room size affecting hot throw), as well as many common issues I've seen in the
+          community: i.e sinkholes, mushrooming, tunneling, airbubbles,and frosting and how to avoid
+          / fix them.
+        </p>
+      </section>
     
       <section class="what-makes-us-special">
         <h2>What Makes Us Special</h2>
@@ -20,15 +54,14 @@ import { RouterLink } from 'vue-router'
             <h3>Hand-Poured Wax</h3>
             <p>
               Each candle is carefully poured by hand, ensuring quality and consistency in every
-              batch.
+              batch. (And a lot of love and care goes into each one!) <strong> We are not selling Candles right now</strong>
             </p>
           </div>
           <div class="feature-card">
             <div class="feature-number">2</div>
             <h3>Unique Wax Colours</h3>
             <p>
-              Our signature colored wax is what sets us apart. Each candle features a different,
-              vibrant wax color.
+              Each candle features a different, vibrant wax color, while still keeping a modern, elegant look.
             </p>
           </div>
           <div class="feature-card">
@@ -66,48 +99,16 @@ import { RouterLink } from 'vue-router'
         <p>
           At Curled Cat Co, we're obsessed with the details. From thinking of new scent ideas and
           unique cat names to designing labels and hand-painting each pawprint, every aspect of our
-          candles is a labour of love.
+          candles is a labour of love, and I love every part of this process.
         </p>
         <p>
-          We want our customers to feel the care and passion that goes into each candle. Whether
+          <strong>We are not selling candles right now, but</strong>,  when we do, our goal is we want our customers to feel the care and passion that goes into each candle. Whether
           you're a cat lover, candle enthusiast, or someone looking for a meaningful gift, we
           believe there's a Curled Cat Co. candle for you.
         </p>
       </section>
 
-        <section class="story-section" id="myStory">
-        <h2>My Story</h2>
-       Hi ! I'm Tasha, the creator of Curled Cat Co.  <br> <br>
-      My love for candles started when I visited my fiancé Justin, in the USA. I quickly became obsessed with them 
-      the cozy glow, the beautiful jars, and especially the incredible scents. But after buying a few, I ran into a problem many candle lovers know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all. That was such a letdown.
-      As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
-      candles. <br> <br>
-      
-      My love for candles started when I visited my fiancé, in the USA. I quickly became obsessed with them ! The pretty, soft glow, the beautiful jars, and most importantly the incredible scents. But after buying a few, I ran into a problem many of us know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all. That was such a letdown. As someone who loves Candles, art, works in tech, and is completely obsessed with cats, I decided I wanted to start making my own candles. <br> <br> My goal with Curled Cat Co. is simple: create sleek, modern candles inspired by our love of cats, while making sure they actually fill your room with delicious fragrance when you light them. <br> <br> Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
 
-      My goal with Curled Cat Co. is simple: create sleek, modern candles inspired by our love of cats, 
-      while making sure they actually fill your room with delicious fragrance when you light them.
-      Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
-      <br> <br>
-
-          <p class="preview-text">
-          Every Curled Cat Co. candle is a labor of love. Our logo was drawn based on my cat, Norman.
-          I'm constantly thinking of new scent ideas, designs, and cat-inspired names. Each candle
-          is hand-poured and finished with a unique handcrafted pawprint on top.
-        </p>
-        
-        <p>
-          I didn't dive head first into making candles. I did 5 months of intense research before I
-          even MADE my first candle. I wanted to understand everything I could before I started. I
-          studied the different waxes, jars, and wick types (LX, CDN, etc.), hot and cold throw
-          performance (How strong the scent is when a candle is lit and how strong a scent is from
-          an unlit candle), How wax pools work and what is the ideal melting poolp per hour,
-          fragrance quality and load percentages, vessel diameters, environmental factors (like
-          airflow or room size affecting hot throw), as well as many common issues I've seen in the
-          community: i.e sinkholes, mushrooming, tunneling, airbubbles,and frosting and how to avoid
-          / fix them.
-        </p>
-      </section>
 
       <section class="cta-section">
         <!-- <h2>Ready to Light Up Your Home?</h2> -->
