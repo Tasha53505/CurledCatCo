@@ -151,8 +151,8 @@ My love for candles started when I visited my fiancé, in the USA.
 
           <div class="feature">
             <div class="feature-icon">🎨</div>
-            <h3>Colorful Wax</h3>
-            <p>Our signature colorful wax makes each candle a beautiful piece of art.</p>
+            <h3>Colourful Wax</h3>
+            <p>Our signature colourful wax makes each candle a beautiful piece of art.</p>
           </div>
 
           <div class="feature">

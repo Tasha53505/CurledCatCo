@@ -132,7 +132,7 @@ const handleSubmit = async () => {
 
         <div class="info-card">
           <h3>🐱 Follow Us</h3>
-          <p>Follow Curled Cat Co. on social media for updates, new scents, and cat content!</p>
+          <p>Accounts created, no content yet ! COMING SOON, Feel free to follow for future posts</p>
           <ul class="social-links">
             <!-- <li><a href="#" target="_blank">Instagram</a></li> -->
             <li><a href="https://www.tiktok.com/@curledcatco" target="_blank">TikTok</a></li>
