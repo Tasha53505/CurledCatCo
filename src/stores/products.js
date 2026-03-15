@@ -16,15 +16,16 @@ export const products = [
       media: [
      { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
     { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
-    { type: 'video', src: '/Candles/IdleHours/Videos/Idle_Hours.mp4' },
+    { type: 'video', src: '/Candles/IdleHours/ConceptArt/Idle_Hours.mp4' },
     // { type: 'video', src: '/Candles/IdleHours/Videos/placeholder-video-IdleHours.mp4' },
   ],
 
 
-        conceptArt: [
-      '/Candles/IdleHours/ConceptArt/IdleHours.png',
-      '/Candles/IdleHours/ConceptArt/IdleHours.png'
-    ],
+        conceptArtMedia: [
+          { type: 'image', src: '/Candles/IdleHours/ConceptArt/Sketch.png' },
+          { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
+          { type: 'video', src: '/Candles/IdleHours/ConceptArt/Idle_Hours.mp4' }
+        ],
 
     designStory:
     'I always thought about how often my cats and cats in general would just sit and stare out the window for hours at what was seemingly nothing, but they were so content. As this candle is my first ever candle, I wanted to start with a peachy fruity scent with a simple colour. Nothing Fancy, just a nice candle to light when you want to relax and do nothing. The concept art is just some of my early sketches and ideas for the label design, which I wanted to be simple and minimalistic to match the vibe of the candle.',

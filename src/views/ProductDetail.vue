@@ -159,26 +159,52 @@ const closeModal = () => {
         <p>We couldn't find that product. Try going back to the shop.</p>
       </div>
 
-       <div class="concept-section">
-    <button class="accordion" @click="showConcept = !showConcept">
-      Interested in how I made this candle?
-    </button>
 
-      <div v-if="showConcept" class="concept-gallery">
-        <h3 class="concept-title">Design Process</h3> <br />
+      <!-- Concept Art Section -->
+    <div class="concept-section">
+  <button
+    class="accordion"
+    @click="showConcept = !showConcept"
+  >
+    Interested in how I made this candle?
+  </button>
 
+  <div v-if="showConcept" class="concept-gallery">
 
-                <p class="design-story">
-          {{ product.designStory }}
-        </p>
-        <img
-          v-for="(art, index) in product.conceptArt"
-          :key="index"
-          :src="art"
-          alt="Concept art"
-        />
-      </div>
-    </div>
+    <h3 class="concept-title">Design Process</h3>
+
+    <p class="design-story">
+      {{ product.designStory }}
+    </p>
+
+    <div
+  v-for="(item, index) in product.conceptArtMedia"
+  :key="index"
+  class="concept-item"
+>
+
+  <img
+    v-if="item.type === 'image'"
+    :src="item.src"
+    class="concept-image"
+    @click="openModal(item.src, 'image')"
+  />
+
+  <div
+    v-else
+    class="concept-video-wrapper"
+    @click="openModal(item.src, 'video')"
+  >
+    <video
+      :src="item.src"
+      class="concept-video"
+      muted
+    ></video>
+
+    <div class="play-overlay">▶</div>
+  </div>
+</div>
+
 
 
     </div>
@@ -203,6 +229,8 @@ const closeModal = () => {
     <button class="close-button" @click="closeModal">✕</button>
 
   </div>
+     </div>
+     </div>
 </div>
 
   </div>
@@ -347,10 +375,47 @@ const closeModal = () => {
   gap: 1rem;
 }
 
-.concept-gallery img {
+.concept-gallery img, .concept-gallery video {
   width: 100%;
   object-fit: cover;
+  border: #000 solid 1px;
 }
+
+.concept-gallery img:hover, .concept-gallery video:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+.concept-video-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.concept-video {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play icon */
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  pointer-events: none;
+  background: rgba(0,0,0,0.2);
+  transition: background 0.2s ease;
+}
+
+.concept-video-wrapper:hover .play-overlay {
+  background: rgba(0,0,0,0.35);
+}
+
 
 .concept-section {
   margin-top: 3rem;
