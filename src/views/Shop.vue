@@ -24,7 +24,7 @@ import { products } from '@/stores/products'
       </div>
 
       <div class="products-section">
-  <h2>All Products</h2>
+  <h2>All Candles</h2>
 
   <div class="products-grid">
     <RouterLink
@@ -60,7 +60,7 @@ import { products } from '@/stores/products'
 
   
 
-      <div
+      <!-- <div
         v-if="modalOpen"
         class="modal"
         @click.self="closeModal"
@@ -71,7 +71,7 @@ import { products } from '@/stores/products'
           <img :src="modalProduct?.image" :alt="modalProduct?.name" />
           <div class="modal-caption">{{ modalProduct?.name }}</div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -128,6 +128,29 @@ import { products } from '@/stores/products'
 
       
 <style scoped>
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  text-align: center;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+
+.product-card:hover {
+  border-color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
 .shop {
   min-height: 100vh;
 }

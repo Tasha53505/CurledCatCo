@@ -10,9 +10,9 @@ export const products = [
     labelColor: 'white',
     size: '9 oz',
     // price: 12,
-    image: '/ConceptArt/IdleHours.png',
+    image: 'ConceptArt/IdleHours.png',
     // optional video preview to play on hover
-    video: '/placeholder-video.mp4',
+    video: 'Videos/placeholder-video-IdleHours.mp4',
   },
   {
     id: 2,

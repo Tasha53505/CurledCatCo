@@ -1,6 +1,24 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { products } from '@/stores/products'
+import { ref } from 'vue'
+
+
+const playVideo = (event) => {
+  const video = event.currentTarget.querySelector('video')
+  if (video) {
+    video.play()
+  }
+}
+
+const pauseVideo = (event) => {
+  const video = event.currentTarget.querySelector('video')
+  if (video) {
+    video.pause()
+    video.currentTime = 0
+  }
+}
+
 
 </script>
 
@@ -58,9 +76,25 @@ import { products } from '@/stores/products'
     :to="{ name: 'Product', params: { id: product.id } }"
     class="product-preview"
   >
-    <div class="featured-image">
-      <img :src="product.image" :alt="product.name" />
-    </div>
+<div
+  class="featured-image"
+  @mouseenter="playVideo"
+  @mouseleave="pauseVideo"
+>
+  <img
+    :src="product.image"
+    :alt="product.name"
+    class="preview-image"
+  />
+
+  <video
+    :src="product.video"
+    class="preview-video"
+    muted
+    loop
+    playsinline
+  ></video>
+</div>
 
     <h3>{{ product.name }}</h3>
     <p>{{ product.description }}</p>
@@ -218,15 +252,33 @@ import { products } from '@/stores/products'
 }
 
 .featured-image {
-  width:45vh;
+  width: 45vh;
   height: 45vh;
   margin: 0 auto 1.5rem;
   border: 2px solid #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+  position: relative;
+  overflow: hidden;
 }
+
+.preview-image,
+.preview-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-video {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-image:hover .preview-video {
+  opacity: 1;
+}
+
+
 
 .featured-image img {
   width: 100%;
