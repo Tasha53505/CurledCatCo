@@ -11,14 +11,13 @@ export const products = [
     labelColor: 'white',
     size: '9 oz',
     // price: 12,
-    // image: '/ConceptArt/IdleHours.png',
 
+    // Carosel product details images / videps
       media: [
      { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
     { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
-    { type: 'image', src: '/Candles/IdleHours/ConceptArt/sss.png' },
     { type: 'video', src: '/Candles/IdleHours/Videos/Idle_Hours.mp4' },
-    { type: 'video', src: '/Candles/IdleHours/Videos/placeholder-video-IdleHours.mp4' },
+    // { type: 'video', src: '/Candles/IdleHours/Videos/placeholder-video-IdleHours.mp4' },
   ],
 
 

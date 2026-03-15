@@ -19,13 +19,10 @@ const handleAddToCart = () => {
 
 
 
-const images = computed(() =>
-  product.value?.media.filter(item => item.type === 'image') || []
+const media = computed(() =>
+  product.value?.media || []
 )
 
-const videos = computed(() =>
-  product.value?.media.filter(item => item.type === 'video') || []
-)
 
 
 const goBack = () => {
@@ -33,21 +30,23 @@ const goBack = () => {
 }
 const currentImage = ref(0)
 
-const nextImage = () => {
-  if (!images.value.length) return
-  currentImage.value =
-    (currentImage.value + 1) % images.value.length
+const currentIndex = ref(0)
+
+const nextMedia = () => {
+  if (!media.value.length) return
+  currentIndex.value =
+    (currentIndex.value + 1) % media.value.length
 }
 
-const prevImage = () => {
-  if (!images.value.length) return
-  currentImage.value =
-    (currentImage.value - 1 + images.value.length) %
-    images.value.length
+const prevMedia = () => {
+  if (!media.value.length) return
+  currentIndex.value =
+    (currentIndex.value - 1 + media.value.length) %
+    media.value.length
 }
 
-const setImage = (index) => {
-  currentImage.value = index
+const setMedia = (index) => {
+  currentIndex.value = index
 }
 
 const showConcept = ref(false)
@@ -84,42 +83,27 @@ const closeModal = () => {
 
 <div class="image-wrapper">
 
-  <!-- Main Image -->
-<img
-  v-if="images.length"
-  :src="images[currentImage]?.src"
-  class="main-image"
-  @click="openModal(images[currentImage].src, 'image')"
-/>
+<div class="main-media" v-if="media.length">
 
+  <img
+    v-if="media[currentIndex].type === 'image'"
+    :src="media[currentIndex].src"
+    class="main-image"
+    @click="openModal(media[currentIndex].src, 'image')"
+  />
 
+  <video
+    v-else
+    :src="media[currentIndex].src"
+    class="main-image"
+    controls
+    @click="openModal(media[currentIndex].src, 'video')"  />
 
+  <button class="nav prev" @click="prevMedia">‹</button>
+  <button class="nav next" @click="nextMedia">›</button>
 
-  <button class="nav prev" @click="prevImage">‹</button>
-  <button class="nav next" @click="nextImage">›</button>
-
-<div class="thumbnail-row">
-  <div
-    v-for="(item, index) in product.media"
-    :key="index"
-  >
-    <img
-      v-if="item.type === 'image'"
-      :src="item.src"
-      :class="{
-        active: images[currentImage]?.src === item.src
-      }"
-      @click="setImage(images.findIndex(img => img.src === item.src))"
-    />
-
-    <video
-      v-if="item.type === 'video'"
-      :src="item.src"
-      muted
-      @click="openModal(item.src, 'video')"
-    ></video>
-  </div>
 </div>
+
 
 </div>
 
@@ -141,7 +125,29 @@ const closeModal = () => {
           <!-- <button class="add-to-cart" @click="handleAddToCart">Add to cart</button> -->
         </div>
 
-        
+        <div class="thumbnail-row">
+  <div
+    v-for="(item, index) in media"
+    :key="index"
+  >
+    <img
+      v-if="item.type === 'image'"
+      :src="item.src"
+      :class="{ active: index === currentIndex }"
+      @click="setMedia(index)"
+    />
+
+    <div
+      v-else
+      class="video-thumb"
+      :class="{ active: index === currentIndex }"
+      @click="setMedia(index)"
+    >
+      ▶
+    </div>
+  </div>
+</div>
+
 
 
       </div>
@@ -205,6 +211,18 @@ const closeModal = () => {
 </template>
 
 <style scoped>
+.video-thumb {
+  width: 70px;
+  height: 70px;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
 /* Modal styling */
 .modal {
   position: fixed;
