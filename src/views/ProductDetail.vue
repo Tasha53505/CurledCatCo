@@ -111,6 +111,7 @@ const closeModal = () => {
 
         <div class="info">
           <h1>{{ product.name }}</h1>
+          <p class="scent-description">{{ product.scentDescription }}</p>
           <p class="description">{{ product.description }}</p>
 
           <div class="specs">
@@ -146,6 +147,9 @@ const closeModal = () => {
       ▶
     </div>
   </div>
+
+  
+
 </div>
 
 
@@ -159,14 +163,13 @@ const closeModal = () => {
         <p>We couldn't find that product. Try going back to the shop.</p>
       </div>
 
-
       <!-- Concept Art Section -->
     <div class="concept-section">
   <button
     class="accordion"
     @click="showConcept = !showConcept"
   >
-    Interested in how I made this candle?
+Interested in the design process behind this candle?
   </button>
 
   <div v-if="showConcept" class="concept-gallery">
@@ -178,34 +181,37 @@ const closeModal = () => {
     </p>
 
     <div
-  v-for="(item, index) in product.conceptArtMedia"
-  :key="index"
-  class="concept-item"
+      v-for="(item, index) in product.conceptArtMedia"
+      :key="index"
+    >
+
+      <img
+        v-if="item.type === 'image'"
+        :src="item.src"
+        class="concept-image"
+        @click="openModal(item.src, 'image')"
+      />
+
+   <div
+  v-else
+  class="video-wrapper"
+  @click="openModal(item.src, 'video')"
 >
-
-  <img
-    v-if="item.type === 'image'"
+  <video
     :src="item.src"
-    class="concept-image"
-    @click="openModal(item.src, 'image')"
-  />
+    class="concept-video"
+    muted
+  ></video>
 
-  <div
-    v-else
-    class="concept-video-wrapper"
-    @click="openModal(item.src, 'video')"
-  >
-    <video
-      :src="item.src"
-      class="concept-video"
-      muted
-    ></video>
-
-    <div class="play-overlay">▶</div>
-  </div>
+  <div class="play-overlay">▶</div>
 </div>
 
 
+
+    </div>
+
+  </div>
+</div>
 
     </div>
 
@@ -229,8 +235,6 @@ const closeModal = () => {
     <button class="close-button" @click="closeModal">✕</button>
 
   </div>
-     </div>
-     </div>
 </div>
 
   </div>
@@ -250,6 +254,29 @@ const closeModal = () => {
   cursor: pointer;
   font-size: 1.2rem;
 }
+
+.video-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.concept-video {
+  width: 100%;
+  display: block;
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  background: rgba(0,0,0,0.25);
+  pointer-events: none;
+}
+
 
 /* Modal styling */
 .modal {
@@ -331,6 +358,7 @@ const closeModal = () => {
 }
 
 
+/* Thumbnail styling */
 .thumbnail-row img, .thumbnail-row   video {
   width: 70px;
   height: 70px;
@@ -387,34 +415,6 @@ const closeModal = () => {
 }
 
 
-.concept-video-wrapper {
-  position: relative;
-  cursor: pointer;
-}
-
-.concept-video {
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Play icon */
-.play-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: white;
-  pointer-events: none;
-  background: rgba(0,0,0,0.2);
-  transition: background 0.2s ease;
-}
-
-.concept-video-wrapper:hover .play-overlay {
-  background: rgba(0,0,0,0.35);
-}
 
 
 .concept-section {
@@ -479,6 +479,12 @@ const closeModal = () => {
   margin: 1.5rem 0;
   color: #555;
   line-height: 1.6;
+}
+
+.scent-description {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
 }
 
 .specs {

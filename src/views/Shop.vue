@@ -34,13 +34,30 @@ import { products } from '@/stores/products'
       class="product-link"
     >
       <div class="product-card">
-        <img :src="product.image" :alt="product.name" />
+
+<img
+  v-if="product.media && product.media.length"
+  :src="product.media[0].src"
+  :alt="product.name"
+/>
+
         <h3>{{ product.name }}</h3>
-        <!-- <p>${{ product.price }}</p> -->
+        <p class="scent-description">
+            {{ product.scentDescription }}
+          </p>     
+          
+          <!-- <p>${{ product.price }}</p> -->
       </div>
     </RouterLink>
   </div>
 </div>
+
+    </div>
+  </div>
+</template>
+
+
+
 
       <!-- <div class="carousel">
         <button class="carousel-nav prev" type="button" @click="prev">‹</button>
@@ -72,11 +89,6 @@ import { products } from '@/stores/products'
           <div class="modal-caption">{{ modalProduct?.name }}</div>
         </div>
       </div> -->
-    </div>
-  </div>
-</template>
-
-
 
     <!-- <div class="filters">
         <div class="filter-section">
@@ -128,6 +140,12 @@ import { products } from '@/stores/products'
 
       
 <style scoped>
+.scent-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
 
 .product-card {
   border: 1px solid #e0e0e0;

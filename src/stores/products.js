@@ -3,7 +3,7 @@ export const products = [
   {
     id: 1,
     name: 'Idle Hours',
-    scentDescription: '',
+    scentDescription: 'Sparkling Peach And Ripe Berries With A Creamy Vanilla Finish',
     description:
       'A serene blend for moments of pure relaxation. Just like a cat spending the day doing absolutely nothing, this candle captures that perfect laziness.',
     waxColor: '#D4A574', // Warm honey/tan colored wax
@@ -36,7 +36,7 @@ export const products = [
     id: 2,
     name: 'Pollen Paws',
     description:
-      'A serene blend for moments of pure relaxation. Just like a cat spending the day doing absolutely nothing, this candle captures that perfect laziness.',
+      'Coming Soon...',
     waxColor: '#000000, #ffb325',
     jarColor: 'clear',
     labelColor: 'transparent',
@@ -47,9 +47,9 @@ export const products = [
   },
   {
     id: 3,
-    name: 'Idle Hours',
+    name: '',
     description:
-      'A serene blend for moments of pure relaxation. Just like a cat spending the day doing absolutely nothing, this candle captures that perfect laziness.',
+      '',
     waxColor: '#D4A574',
     jarColor: 'black',
     labelColor: 'white',

@@ -83,13 +83,13 @@ const pauseVideo = (event) => {
   @mouseleave="pauseVideo"
 >
   <img
-    :src="product.images ? product.images[0] : product.image"
+    :src="product.media ? product.media[0].src : product.image"
     :alt="product.name"
     class="preview-image"
   />
 
   <video
-    :src="product.videos ? product.videos[0] : ''"
+    :src="product.media && product.media[0].type === 'video' ? product.media[0].src : ''"
     class="preview-video"
     muted
     loop
