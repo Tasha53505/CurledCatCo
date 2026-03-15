@@ -35,7 +35,7 @@ const pauseVideo = (event) => {
 
           Every candle is poured with care, finished with a hand-painted pawprint, and inspired by
           the unique charm of our kitty friends. Bring a touch of calm and cozy luxury to your space
-          and Each candle invites you to slow down, unwind, and enjoy the little moments in life.
+          and every candle invites you to slow down, unwind, and enjoy the little moments in life.
         </p>
         <RouterLink   :to="{ path: '/', hash: '#featuredCollection' }"
           class="cta-button">View Curled Cat Co. Candle Collection</RouterLink>
@@ -48,13 +48,14 @@ const pauseVideo = (event) => {
         <h2 class="text-center">My Story</h2>
         <p class="preview-text">
           Hi ! I'm Tasha, the creator of Curled Cat Co.  <br> <br>
-      My love for candles started when I visited my fiancé, in the USA. I quickly became obsessed with them 
-      the cozy glow, the beautiful jars, and especially the incredible scents. But after buying a few, I ran into a problem many candle lovers know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all. That was such a letdown.
+      My love for candles started when I visited my fiancé, in the USA. I quickly became obsessed with them ! 
+      The cozy glow, the beautiful jars, and most importantly the incredible scents. But after buying a few, I ran into a problem many of us know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all. That was such a letdown.
       As someone who loves art, works in tech, and is completely obsessed with cats, I decided to start making my own 
       candles. <br> <br>
       
       My goal with Curled Cat Co. is simple: create sleek, modern candles inspired by our love of cats, 
-      while making sure they actually fill your room with delicious fragrance when you light them.
+      while making sure they actually fill your room with delicious fragrance when you light them. <br> <br>
+
       Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.
         </p>
    
@@ -82,13 +83,13 @@ const pauseVideo = (event) => {
   @mouseleave="pauseVideo"
 >
   <img
-    :src="product.image"
+    :src="product.images ? product.images[0] : product.image"
     :alt="product.name"
     class="preview-image"
   />
 
   <video
-    :src="product.video"
+    :src="product.videos ? product.videos[0] : ''"
     class="preview-video"
     muted
     loop
