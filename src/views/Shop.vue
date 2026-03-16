@@ -170,10 +170,6 @@ import { products } from '@/stores/products'
       
 <style scoped>
 
-.coming-soon {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
 
 .scent-description {
   font-size: 0.9rem;
@@ -305,8 +301,8 @@ import { products } from '@/stores/products'
 }
 
 .coming-soon {
-  text-align: center;
-  padding: 3rem 0 2rem;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .coming-soon h2 {
@@ -318,7 +314,7 @@ import { products } from '@/stores/products'
   font-size: 1.1rem;
   color: #555;
 }
-
+/* Carousel */
 .carousel {
   position: relative;
   margin: 2rem 0 4rem;
