@@ -254,14 +254,14 @@ My love for candles started when I visited my fiancé, in the USA.
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3rem;
   margin-bottom: 2rem;
 }
 
 .product-preview {
   text-align: center;
-  padding: 2rem;
+  padding: 1.2rem;
   border: 1px solid #e0e0e0;
   transition: all 0.3s ease;
 }
@@ -272,14 +272,13 @@ My love for candles started when I visited my fiancé, in the USA.
 }
 
 .featured-image {
-  width: 45vh;
-  height: 45vh;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   margin: 0 auto 1.5rem;
-  border: 2px solid #000000;
+  border: 2px solid #000;
   position: relative;
   overflow: hidden;
 }
-
 .scent-description {
   font-size: 0.8rem;
   color: #666;
