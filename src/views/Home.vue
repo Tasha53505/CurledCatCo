@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { products } from '@/stores/products'
+import ProductMedia from '@/components/ProductMedia.vue'
+
 </script>
 
 <template>
@@ -74,11 +76,7 @@ My love for candles started when I visited my fiancé, in the USA.
               class="product-preview"
             >
               <div class="featured-image">
-                <img
-                  :src="product.media?.[0]?.src || product.image"
-                  :alt="product.name"
-                  class="preview-image"
-                />
+                <ProductMedia :product="product" />
 
                 <video
                   v-if="product.media?.find(m => m.type === 'video')"

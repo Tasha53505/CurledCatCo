@@ -2,6 +2,7 @@
 import ProductCard from '@/components/ProductCard.vue'
 import { ref } from 'vue'
 import { products } from '@/stores/products'
+import ProductMedia from '@/components/ProductMedia.vue'
 
 </script>
 
@@ -40,18 +41,16 @@ import { products } from '@/stores/products'
               class="product-link"
             >
               <div class="product-card">
-                <img
-                  v-if="product.media?.length"
-                  :src="product.media[0].src"
-                  :alt="product.name"
-                />
 
-                <h3>{{ product.name }}</h3>
+              <ProductMedia :product="product" />
 
-                <p class="scent-description">
-                  {{ product.scentDescription }}
-                </p>
-              </div>
+            <h3>{{ product.name }}</h3>
+
+            <p class="scent-description">
+              {{ product.scentDescription }}
+            </p>
+
+          </div>
             </RouterLink>
 
             <!-- Coming Soon -->
@@ -187,6 +186,7 @@ import { products } from '@/stores/products'
   margin-top: 1em;
 }
 
+
 .product-card:hover {
   border-color: #000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -229,6 +229,7 @@ import { products } from '@/stores/products'
   color: #666;
 }
 
+/* Displays Shop content not available on side */
 .shop-content {
   padding: 3rem 0;
   display: grid;
@@ -236,6 +237,12 @@ import { products } from '@/stores/products'
   gap: 2rem;
 }
 
+/* Displays shop not avaialble as one row */
+
+/* .shop-content {
+  padding: 3rem 0;
+
+} */
 .filters {
   background-color: #f9f9f9;
   padding: 2rem;
@@ -272,21 +279,21 @@ import { products } from '@/stores/products'
 
 /* For when I have more than 1 candle */
 
-/* .products-grid {
+.products-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-} */
+}
 
 /* .products-grid {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 } */
  
-
+/* 
 .products-grid {
   grid-template-columns: repeat(2, 1fr);
-}
+} */
 
 
 
