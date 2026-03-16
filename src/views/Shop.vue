@@ -184,6 +184,7 @@ import { products } from '@/stores/products'
   text-align: center;
   background: #fff;
   transition: all 0.25s ease;
+  margin-top: 1em;
 }
 
 .product-card:hover {
@@ -193,13 +194,21 @@ import { products } from '@/stores/products'
 
 .product-card img {
   width: 100%;
-  max-height: 350px;
+  max-height: 400px;
   object-fit: contain;
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #e0e0e0;
   padding: 1rem;
   margin-bottom: 1rem;
 }
+
+/* .product-card img {
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+} */
+
 .shop {
   min-height: 100vh;
 }
@@ -262,16 +271,24 @@ import { products } from '@/stores/products'
 }
 
 /* For when I have more than 1 candle */
+
 /* .products-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 } */
 
-.products-grid {
+/* .products-grid {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+} */
+ 
+
+.products-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
+
+
 
 .product-link {
   text-decoration: none;
