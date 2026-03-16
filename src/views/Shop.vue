@@ -16,7 +16,7 @@ import { products } from '@/stores/products'
 
     <div class="container shop-content">
       <div class="">
-        <h2>Shop Not Available Yet 🐈‍⬛</h2>
+        <h2>Shop Not Available Yet🐈‍⬛</h2>
         <p>
           As my business has not launched yet and this site serves purely as a showcase of my work,
           buying my candles is not available yet. My work may not be copied, stolen, or referenced.
@@ -193,7 +193,7 @@ import { products } from '@/stores/products'
 
 .product-card img {
   width: 100%;
-  max-height: 220px;
+  max-height: 350px;
   object-fit: contain;
   background: #fff;
   border: 1px solid #e0e0e0;
@@ -261,9 +261,15 @@ import { products } from '@/stores/products'
   margin-bottom: 2rem;
 }
 
-.products-grid {
+/* For when I have more than 1 candle */
+/* .products-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+} */
+
+.products-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
