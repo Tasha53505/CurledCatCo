@@ -36,9 +36,9 @@ import ProductMedia from '@/components/ProductMedia.vue'
         <p class="preview-text">
           Hi! I'm Tasha, the creator of Curled Cat Co.
           <br><br>
-My love for candles started when I visited my fiancé, in the USA.
+My love for candles started when I visited my fiancé, in the USA and went to Bed, Bath and BodyWorks for the first time. I'm from New Zealand, so I had never been to a Bath and Body Works before, and I was blown away by shelf after shelf of candles. <br> <br>
  I quickly became obsessed with them ! The pretty, soft glow, the beautiful jars, and most importantly the incredible scents. 
- But after buying a few (More like... 30 candles), I ran into a problem many of us know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all, or the cost just became too much.
+ But after buying a few (More like... 30 candles), I ran into a problem many of us know too well: some looked amazing and smelled great before you lit them, but once you lit them… barely any scent at all, or the cost just became too much. <br> <br>
   That was such a letdown. As someone who loves Candles, art, works in tech, and is completely obsessed with cats, I decided I wanted to start making my own candles. It is also about the joy of making candles, creating new designs, developing signature blended scents, and embracing the art behind it all. <br> <br> 
   Candle making has become a creative journey I genuinely love, and I'm so excited to share it with fellow cat lovers.      
    </p>
