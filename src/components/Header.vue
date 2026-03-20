@@ -10,7 +10,7 @@ const { cartItemCount } = useCart()
     <div class="container">
       <nav class="navbar">
         <RouterLink to="/" class="logo">
-          <img src="/public/CurledCatLogo.png" alt="CurledCatCo Logo" class="logo-image">
+          <img src="/CurledCatLogo.png" alt="CurledCatCo Logo" class="logo-image">
         </RouterLink>
                   <!-- <span class="logo-text logo">Curled Cat Co</span> -->
 

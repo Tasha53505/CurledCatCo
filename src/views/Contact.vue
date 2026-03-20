@@ -135,7 +135,10 @@ const handleSubmit = async () => {
           <p>Accounts created, no content yet ! COMING SOON, Feel free to follow for future posts</p>
           <ul class="social-links">
             <!-- <li><a href="#" target="_blank">Instagram</a></li> -->
+            <li><a href="http://youtube.com/@CurledCatCo" target="_blank">Youtube</a></li>
+
             <li><a href="https://www.tiktok.com/@curledcatco" target="_blank">TikTok</a></li>
+
             <li><a href="https://www.facebook.com/people/Curled-Cat-Co-Candles/61580700661178/" target="_blank">Facebook</a></li>
           </ul>
         </div>
