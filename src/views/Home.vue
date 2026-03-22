@@ -2,6 +2,12 @@
 import { RouterLink } from 'vue-router'
 import { products } from '@/stores/products'
 import ProductMedia from '@/components/ProductMedia.vue'
+import { setupVideo } from '@/stores/videoHelpers'
+
+
+const handleLoadedMetadata = (event, item) => {
+  setupVideo(event.target, item)
+}
 
 </script>
 
@@ -76,17 +82,11 @@ My love for candles started when I visited my fiancé, in the USA and went to Be
               class="product-preview"
             >
               <div class="featured-image">
-                <ProductMedia :product="product" />
-
-                <video
-                  v-if="product.media?.find(m => m.type === 'video')"
-                  :src="product.media.find(m => m.type === 'video').src"
-                  class="preview-video"
-                  muted
-                  loop
-                  autoplay
-                  playsinline
-                ></video>
+            <ProductMedia
+                      :product="product"
+                      :onLoadedMetadata="handleLoadedMetadata"
+                    />
+      
               </div>
 
               <h3>{{ product.name }}</h3>
@@ -104,13 +104,9 @@ My love for candles started when I visited my fiancé, in the USA and went to Be
               v-else
               class="product-preview coming-soon"
             >
-              <div class="featured-image">
-                <img
-                  :src="product.media?.[0]?.src || product.image"
-                  :alt="product.name"
-                  class="preview-image"
-                />
-              </div>
+                <div class="featured-image">
+            <ProductMedia :product="product" />
+          </div>
 
               <h3>{{ product.name }}</h3>
               <p>{{ product.description }}</p>
@@ -167,7 +163,13 @@ My love for candles started when I visited my fiancé, in the USA and went to Be
 
 <style scoped>
 .hero {
-  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+
+    /* background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%); */
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)),
+    url('/Candles/IdleHours/Photos/IdleHoursCoverImage.jpg') center/cover no-repeat;
+
+
   padding: 6rem 2rem;
   text-align: center;
   border-bottom: 1px solid #000000;

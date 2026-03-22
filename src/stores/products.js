@@ -14,10 +14,29 @@ export const products = [
 
     // Carosel product details images / videps
       media: [
-     { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
-    { type: 'image', src: '/Candles/IdleHours/ConceptArt/IdleHours.png' },
-    { type: 'video', src: '/Candles/IdleHours/ConceptArt/Idle_Hours.mp4' },
-    { type: 'video', src: '/Candles/IdleHours/Videos/placeholder-video-IdleHours.mp4' },
+          { type: 'image', src: '/Candles/IdleHours/Photos/IdleHoursWithFlame.jpg' },
+        { type: 'image', src: '/Candles/IdleHours/Photos/IdleHoursCoverImage.jpg' },
+
+
+      { type: 'image', src: '/Candles/IdleHours/Photos/ClearLabel.jpg' },
+
+
+     { type: 'image', src: '/Candles/IdleHours/Photos/SlightTopDownFlame.jpg' },
+
+
+         { type: 'image', src: '/Candles/IdleHours/Photos/PawprintCloseup.jpg' },
+     { type: 'image', src: '/Candles/IdleHours/Photos/SlightTopOverview.jpg' },
+     
+   
+     { type: 'image', src: '/Candles/IdleHours/Photos/windowFlameToptown.jpg' },
+     { type: 'image', src: '/Candles/IdleHours/Photos/windowFrontView.jpg' },
+ 
+ { type: 'video', 
+        src: '/Candles/IdleHours/Videos/PawPrintVideo.mp4', 
+        speed: 15,        // playback rate
+        mute: true,       // always muted
+        autoplay: true
+      },   
   ],
 
 

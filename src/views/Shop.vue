@@ -3,6 +3,12 @@ import ProductCard from '@/components/ProductCard.vue'
 import { ref } from 'vue'
 import { products } from '@/stores/products'
 import ProductMedia from '@/components/ProductMedia.vue'
+import { setupVideo } from '@/stores/videoHelpers'
+
+
+const handleLoadedMetadata = (event, item) => {
+  setupVideo(event.target, item)
+}
 
 </script>
 
@@ -42,7 +48,8 @@ import ProductMedia from '@/components/ProductMedia.vue'
             >
               <div class="product-card">
 
-              <ProductMedia :product="product" />
+              <ProductMedia :product="product" 
+               :onLoadedMetadata="handleLoadedMetadata" />
 
             <h3>{{ product.name }}</h3>
 

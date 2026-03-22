@@ -3,6 +3,8 @@ import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { getProductById } from '@/stores/products'
 import { useCart } from '@/composables/useCart'
+import { setupVideo } from '@/stores/videoHelpers'
+
 
 const route = useRoute()
 const router = useRouter()
@@ -56,11 +58,14 @@ const isModalOpen = ref(false)
 const modalMedia = ref(null)
 const modalType = ref('image')
 
-const openModal = (src, type = 'image') => {
-  modalMedia.value = src
-  modalType.value = type
+const openModal = (item) => {
+  modalMedia.value = item.src
+  modalType.value = item.type
+  modalItem.value = item   // store full media object
   isModalOpen.value = true
 }
+
+const modalItem = ref(null)
 
 const closeModal = () => {
   isModalOpen.value = false
@@ -68,7 +73,9 @@ const closeModal = () => {
 }
 
 
-
+const handleLoadedMetadata = (event, item) => {
+  setupVideo(event.target, item)
+}
 </script>
 
 <template>
@@ -89,7 +96,7 @@ const closeModal = () => {
     v-if="media[currentIndex].type === 'image'"
     :src="media[currentIndex].src"
     class="main-image"
-    @click="openModal(media[currentIndex].src, 'image')"
+    @click="openModal(media[currentIndex])"
   />
 
   <video
@@ -97,9 +104,14 @@ const closeModal = () => {
     :key="media[currentIndex].src"
     :src="media[currentIndex].src"
     class="main-image"
-    controls
     muted
-    @click="openModal(media[currentIndex].src, 'video')"  />
+    loop
+    controls
+    autoplay
+  playsinline
+ @click="openModal(media[currentIndex])"
+  @loadedmetadata="handleLoadedMetadata($event, media[currentIndex])"
+  />
 
   <button class="nav prev" @click="prevMedia">‹</button>
   <button class="nav next" @click="nextMedia">›</button>
@@ -191,18 +203,20 @@ Interested in the design process behind this candle?
         v-if="item.type === 'image'"
         :src="item.src"
         class="concept-image"
-        @click="openModal(item.src, 'image')"
+  @click="openModal(item)"
       />
 
    <div
   v-else
   class="video-wrapper"
-  @click="openModal(item.src, 'video')"
+  @click="openModal(item)"
 >
   <video
     :src="item.src"
     class="concept-video"
     muted
+    autoplay
+    @loadedmetadata="handleLoadedMetadata($event, media[currentIndex])"
   ></video>
 
   <div class="play-overlay">▶</div>
@@ -226,13 +240,16 @@ Interested in the design process behind this candle?
       class="modal-media"
     />
 
-    <video
-      v-if="modalType === 'video'"
-      :src="modalMedia"
-      class="modal-media"
-      controls
-      autoplay
-    ></video>
+<video
+  v-if="modalType === 'video'"
+  :src="modalMedia"
+  class="modal-media"
+  controls
+  autoplay
+  muted
+  loop
+  @loadedmetadata="handleLoadedMetadata($event, modalItem)"
+></video>
 
     <button class="close-button" @click="closeModal">✕</button>
 

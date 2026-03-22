@@ -1,9 +1,22 @@
+
 <script setup>
+import { setupVideo } from '@/stores/videoHelpers'
+
 const props = defineProps({
-  product: Object
+  product: Object,
+  onLoadedMetadata: Function // <-- new prop
 })
 
 const video = props.product.media?.find(m => m.type === 'video')
+
+// call either passed handler or default setupVideo
+const handleLoadedMetadata = (event, media) => {
+  if (props.onLoadedMetadata) {
+    props.onLoadedMetadata(event, media)
+  } else {
+    setupVideo(event.target, media)
+  }
+}
 </script>
 
 <template>
@@ -18,6 +31,7 @@ const video = props.product.media?.find(m => m.type === 'video')
     <video
       v-if="video"
       :src="video.src"
+      @loadedmetadata="handleLoadedMetadata($event, video)"
       class="preview-video"
       muted
       loop
@@ -26,6 +40,7 @@ const video = props.product.media?.find(m => m.type === 'video')
     ></video>
   </div>
 </template>
+
 
 <style scoped>
 .product-media {
