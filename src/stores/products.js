@@ -53,30 +53,33 @@ export const products = [
   },
     {
     id: 2,
-    status: 'Coming Soon',
-    name: 'Candle Coming Soon',
-    scentDescription: 'Coming Soon...',
+    status: 'active',
+    name: 'Open Windows',
+    scentDescription: 'A burst of citrus sunshine. Persian lime and crisp lemongrass, clean and Refreshing.',
     description:
-      'Description coming soon.',
-    waxColor: '#D4A574', // Warm honey/tan colored wax
-    jarColor: 'black',
+      'A burst of citrus sunshine. Persian lime and crisp lemongrass, clean and Refreshing.',
+    waxColor: '#fffd75', // Yellow
+    jarColor: 'white',
     labelColor: 'white',
-    size: '9 oz',
+    size: '9 oz / 255 g',
     // price: 12,
 
     // Carosel product details images / videps
       media: [
-     { type: 'image', src: '/Candles/X' },
-    { type: 'image', src: '/Candles/IdleHours/x' },
-    { type: 'video', src: '/Candles/IdleHours/x' },
+     { type: 'image', src: '/Candles/OpenWindows/Photos/Label.jpg' },
+         { type: 'image', src: '/Candles/OpenWindows/Photos/WindowUnlit.jpg' },
+
+    { type: 'image', src: '/Candles/OpenWindows/Photos/FlameTopDown.jpg' },
+    { type: 'image', src: '/Candles/OpenWindows/Photos/Pawprint.jpg' },
+    { type: 'video', src: '/Candles/OpenWindows/Videos/PawPrintTimelapse.mp4' },
     // { type: 'video', src: '/Candles/IdleHours/Videos/placeholder-video-IdleHours.mp4' },
   ],
 
 
         conceptArtMedia: [
-          { type: 'image', src: '/Candles/IdleHours/ConceptArt/x' },
-          { type: 'image', src: '/Candles/IdleHours/ConceptArt/x' },
-          { type: 'video', src: '/Candles/IdleHours/ConceptArt/x' }
+          { type: 'image', src: '/Candles/OpenWindows/ConceptArt/Sketch.png' },
+          { type: 'image', src: '/Candles/OpenWindows/ConceptArt/Final.png' },
+          { type: 'video', src: '/Candles/OpenWindows/ConceptArt/SketchTimelapse.mp4' }
         ],
 
     designStory:
