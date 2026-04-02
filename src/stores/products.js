@@ -88,20 +88,87 @@ export const products = [
   },
   {
     id: 3,
-     status: 'Coming Soon',
-    name: 'Candle Coming Soon',
-    scentDescription: 'Coming Soon...',
+     status: 'active',
+    name: 'Vanilla Pawprints',
+    scentDescription: 'Rich Vanilla and Light Caramel with a Smooth, Sweet Finish',
     description:
-      'Description coming soon.',
-      
-    waxColor: '#D4A574',
+      'Rich Vanilla and Light Caramel with a Smooth, Sweet Finish.',
+
+          // Carosel product details images / videps
+      media: [
+     { type: 'image', src: '/Candles/VanillaPawprints/Photos/WindowUnlit.jpg' },
+         { type: 'image', src: '/Candles/VanillaPawprints/Photos/WithOthers.jpg' },
+
+    { type: 'image', src: '/Candles/VanillaPawprints/Photos/HoldingCandle.jpg' },
+    { type: 'image', src: '/Candles/VanillaPawprints/Photos/LitWindow.jpg' },
+    // { type: 'video', src: '/Candles/VanillaPawprints/Videos/PawPrintVideo.mp4' },
+  ],
+
+
+         conceptArtMedia: [
+          { type: 'image', src: '/Candles/VanillaPawprints/ConceptArt/Sketch.png' },
+          { type: 'image', src: '/Candles/VanillaPawprints/ConceptArt/Final.png' },
+          { type: 'video', src: '/Candles/VanillaPawprints/ConceptArt/SketchTimelapse.mov' }
+        ],
+
+    waxColor: '#ffffff',
     jarColor: 'black',
     labelColor: 'white',
     size: '9 oz',
     // price: 12,
-    image: '/placeholder-candle.svg',
     // also no video for now
   },
+
+   {
+    id: 4,
+     status: 'active',
+    name: 'Vanilla Pawprints',
+    scentDescription: 'Rich Vanilla and Light Caramel with a Smooth, Sweet Finish',
+    description:
+      'Rich Vanilla and Light Caramel with a Smooth, Sweet Finish.',
+
+          // Carosel product details images / videps
+      media: [
+     { type: 'image', src: '/Candles/VanillaPawprints/Photos/WindowUnlit.jpg' },
+         { type: 'image', src: '/Candles/VanillaPawprints/Photos/WithOthers.jpg' },
+
+    { type: 'image', src: '/Candles/VanillaPawprints/Photos/HoldingCandle.jpg' },
+    { type: 'image', src: '/Candles/VanillaPawprints/Photos/LitWindow.jpg' },
+    // { type: 'video', src: '/Candles/VanillaPawprints/Videos/PawPrintVideo.mp4' },
+  ],
+
+
+         conceptArtMedia: [
+          { type: 'image', src: '/Candles/VanillaPawprints/ConceptArt/Sketch.png' },
+          { type: 'image', src: '/Candles/VanillaPawprints/ConceptArt/Final.png' },
+          { type: 'video', src: '/Candles/VanillaPawprints/ConceptArt/SketchTimelapse.mov' }
+        ],
+
+    waxColor: '#ffffff',
+    jarColor: 'black',
+    labelColor: 'white',
+    size: '9 oz',
+    // price: 12,
+    // also no video for now
+  },
+
+
+  //  {
+  //   id: 3,
+  //    status: 'Coming Soon',
+  //   name: 'Candle Coming Soon',
+  //   scentDescription: 'Coming Soon...',
+  //   description:
+  //     'Description coming soon.',
+      
+  //   waxColor: '#D4A574',
+  //   jarColor: 'black',
+  //   labelColor: 'white',
+  //   size: '9 oz',
+  //   // price: 12,
+  //   image: '/placeholder-candle.svg',
+  //   // also no video for now
+  // },
 ]
 
 export function getProductById(id) {
