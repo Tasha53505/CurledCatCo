@@ -122,27 +122,28 @@ export const products = [
    {
     id: 4,
      status: 'active',
-    name: 'Vanilla Pawprints',
-    scentDescription: 'Rich Vanilla and Light Caramel with a Smooth, Sweet Finish',
+    name: 'Sunlit Whiskers',
+    scentDescription: 'Crisp French Pear And Sun-Ripened Peach With A Smooth, Fruity Finish',
     description:
-      'Rich Vanilla and Light Caramel with a Smooth, Sweet Finish.',
+      'Crisp French Pear And Sun-Ripened Peach With A Smooth, Fruity Finish.',
 
           // Carosel product details images / videps
       media: [
-     { type: 'image', src: '/Candles/VanillaPawprints/Photos/WindowUnlit.jpg' },
-         { type: 'image', src: '/Candles/VanillaPawprints/Photos/WithOthers.jpg' },
+     { type: 'image', src: '/Candles/SunlitWhiskers/Photos/SunlitWhiskers.jpg' },
+         { type: 'image', src: '/Candles/SunlitWhiskers/Photos/litCandle.jpg' },
 
-    { type: 'image', src: '/Candles/VanillaPawprints/Photos/HoldingCandle.jpg' },
-    { type: 'image', src: '/Candles/VanillaPawprints/Photos/LitWindow.jpg' },
-    // { type: 'video', src: '/Candles/VanillaPawprints/Videos/PawPrintVideo.mp4' },
+    { type: 'image', src: '/Candles/SunlitWhiskers/Photos/litStraight.jpg' },
+    { type: 'image', src: '/Candles/SunlitWhiskers/Photos/Pawprint.jpg' },
+    { type: 'image', src: '/Candles/SunlitWhiskers/Photos/litTopDown.jpg' },
+    // { type: 'video', src: '/Candles/SunlitWhiskers/Videos/PawPrintVideo.mp4' },
   ],
 
 
-         conceptArtMedia: [
-          { type: 'image', src: '/Candles/VanillaPawprints/ConceptArt/Sketch.png' },
-          { type: 'image', src: '/Candles/VanillaPawprints/ConceptArt/Final.png' },
-          { type: 'video', src: '/Candles/VanillaPawprints/ConceptArt/SketchTimelapse.mov' }
-        ],
+        //  conceptArtMedia: [
+        //   { type: 'image', src: '/Candles/VanillaPawprints/ConceptArt/Sketch.png' },
+        //   { type: 'image', src: '/Candles/VanillaPawprints/ConceptArt/Final.png' },
+        //   { type: 'video', src: '/Candles/VanillaPawprints/ConceptArt/SketchTimelapse.mov' }
+        // ],
 
     waxColor: '#ffffff',
     jarColor: 'black',

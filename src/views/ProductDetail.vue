@@ -178,7 +178,7 @@ const handleLoadedMetadata = (event, item) => {
       </div>
 
       <!-- Concept Art Section -->
-    <div class="concept-section">
+    <div v-if="product.conceptArtMedia?.length" class="concept-section">
   <button
     class="accordion"
     @click="showConcept = !showConcept"
